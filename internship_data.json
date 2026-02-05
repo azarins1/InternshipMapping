@@ -1,6 +1,6 @@
 {"cities":[
 {"location":"New York, NY","data":
-{"jobs":397,"quant":76,"swe":149,"hardware":10,"datascience_ml":162,"companies":["Abdiel Capital","Absci","Adobe","AlixPartners","Allium","Altice USA","Amazon","American Express","Anchorage","Andreessen Horowitz","Arcesium","Assured Guaranty","Audax Group","BNP Paribas","Bedrock Robotics","Blackrock","Blackstone","Block","Blockhouse","Brevan Howard","Bridgewater Associates","Brilliant","Broadridge","Brookfield","Brookfield Asset Management","Brown Brothers Harriman","ByteDance","CVS Health","Carta Healthcare","Cboe","Cerity Partners","Charles River Associates (CRA)","Citadel Securities","Citi","Coinbase","D. E. Shaw","DESRI","DV Trading","Datadog","David Yurman","Deloitte","Deutsche Bank","Domino Data Lab","DoorDash","Dow Jones","Duolingo","Engineers Gate","Ernst & Young","Eulerity","FOX","FactSet","Fidelity Investments","Fifth Third Bank","Five Rings","Five Rings Capital","Fizz","Flow Traders","GTS","Galaxy","Garage","Garner Health","Geico","Genentech","Global Infrastructure","GlobalFoundries","GlossGenius","Goldman Sachs","Golin","Google","Grant Thornton","Guardian Life","Guidehouse","Gusto","Harmonic","Highmark Health","Hudson River Trading","IBM","IEX","ING","IPG DXTRA","Intercontinental Exchange","Intuit","JP Morgan Chase","Jane Street","Kensho","Lazard","Lyft","MEMX","Major League Baseball","Man Group","Marsh","Marshall Wace","Mercury","Meta","Microsoft","MongoDB","Morgan Stanley","N1","NBCUniversal","Nasdaq","Nestle","New York Life","Nexstar","Nokia","Nominal","OCC","ONE Finance","Octaura","OffDeal","PDT Partners","Palantir","Paramount Global","Persistent Systems","Point72","Port Authority NY NJ","PricewaterhouseCoopers (PwC)","Quantbot Technologies","RTX","Ramp","Reality Defender","Rilla","Robinhood","Royal Bank of Canada","S&P Global","SNC-Lavalin","SageSure","SeatGeek","Seven Research","Shopify","Sixfold","Snackpass","Sony","Sorare","Squarepoint","StoneX Group","Sumitomo Mitsui Banking Corporation","Susquehanna International Group (SIG)","Syntax","Syska Hennessy Group","TD Securities","Take Two","Talos Trading","The Federal Reserve System","The National Football League","The New York Times","The Trade Desk","The Tudor Group","The Walt Disney Company","TheGuarantors","Thermo Fisher Scientific","TikTok","Tower Research Capital","Tradeweb","Tradeweb Markets","TransPerfect","Trillium","Two Sigma","UNFPA","USA for UNHCR","Uber","Uncountable","Vatic Investments","Verisk","Versana","Viam","Viking Global","Virtu","Voyant Photonics","Walleye Capital","Warner Bros.","Wells Fargo","Wonder","iCapital Network","iHeartMedia"],"coords":[40.6943,-73.9249]}},
+{"jobs":397,"quant":76,"swe":149,"hardware":10,"datascience_ml":162,"companies":["Abdiel Capital","Absci","Adobe","AlixPartners","Allium","Altice USA","Amazon","American Express","Anchorage","Andreessen Horowitz","Arcesium","Assured Guaranty","Audax Group","BNP Paribas","Bedrock Robotics","Blackrock","Blackstone","Block","Blockhouse","Brevan Howard","Bridgewater Associates","Brilliant","Broadridge","Brookfield","Brookfield Asset Management","Brown Brothers Harriman","ByteDance","CVS Health","Carta Healthcare","Cboe","Cerity Partners","Charles River Associates (CRA)","Citadel Securities","Citi","Coinbase","D. E. Shaw","DESRI","DV Trading","Datadog","David Yurman","Deloitte","Deutsche Bank","Domino Data Lab","DoorDash","Dow Jones","Duolingo","Engineers Gate","Ernst & Young","Eulerity","FOX","FactSet","Fidelity Investments","Fifth Third Bank","Five Rings","Five Rings Capital","Fizz","Flow Traders","GTS","Galaxy","Garage","Garner Health","Geico","Genentech","Global Infrastructure","GlobalFoundries","GlossGenius","Goldman Sachs","Golin","Google","Grant Thornton","Guardian Life","Guidehouse","Gusto","Harmonic","Highmark Health","Hudson River Trading","IBM","IEX","ING","IPG DXTRA","Intercontinental Exchange","Intuit","JP Morgan Chase","Jane Street","Kensho","Lazard","Lyft","MEMX","Major League Baseball","Man Group","Marsh","Marshall Wace","Mercury","Meta","Microsoft","MongoDB","Morgan Stanley","N1","NBCUniversal","Nasdaq","Nestle","New York Life","Nexstar","Nokia","Nominal","OCC","ONE Finance","Octaura","OffDeal","Ontario Teachers' Pension Plan","PDT Partners","Palantir","Paramount Global","Persistent Systems","Point72","Port Authority NY NJ","PricewaterhouseCoopers (PwC)","Quantbot Technologies","RTX","Ramp","Reality Defender","Rilla","Robinhood","Royal Bank of Canada","S&P Global","SNC-Lavalin","SageSure","SeatGeek","Seven Research","Shopify","Sixfold","Snackpass","Sony","Sorare","Squarepoint","StoneX Group","Sumitomo Mitsui Banking Corporation","Susquehanna International Group (SIG)","Syntax","Syska Hennessy Group","TD Securities","Take Two","Talos Trading","The Federal Reserve System","The National Football League","The New York Times","The Trade Desk","The Tudor Group","The Walt Disney Company","TheGuarantors","Thermo Fisher Scientific","TikTok","Tower Research Capital","Tradeweb","Tradeweb Markets","TransPerfect","Trillium","Two Sigma","UNFPA","USA for UNHCR","Uber","Uncountable","Vatic Investments","Verisk","Versana","Viam","Viking Global","Virtu","Voyant Photonics","Walleye Capital","Warner Bros.","Wells Fargo","Wonder","iCapital Network","iHeartMedia"],"coords":[40.6943,-73.9249]}},
 {"location":"San Jose, CA","data":
 {"jobs":262,"quant":1,"swe":123,"hardware":35,"datascience_ml":103,"companies":["ASML","Adobe","Altera Corporation","Archer","Astera Labs","Bloom Energy","ByteDance","Cadence Design Systems","Capital One","Cisco","Figure","Google","Hewlett Packard Enterprise","IBM","KLA","Micron Technology","Muon Space","Nokia","Nutanix","PayPal","RTX","Rambus","Roku","Samsung","Stryker","TetraMem","Thermo Fisher Scientific","TikTok","Viavi Solutions","WeRide","Western Digital","Zebra Technologies","Zscaler"],"coords":[37.3012,-121.848]}},
 {"location":"San Francisco, CA","data":
@@ -9,6 +9,8 @@
 {"jobs":208,"quant":43,"swe":75,"hardware":8,"datascience_ml":82,"companies":["Accenture","Akuna Capital","Allstate","Allstate Insurance Company","Altom Transport","Apex Fintech Solutions","Arrive Logistics","BMO","Bank of America","Belvedere Trading","BlackEdge Capital","Blackrock","Boston Consulting Group","CCC Intelligent Solutions","CIBC","CME Group","CTC","Camping World","Capital One","CareBridge","Caterpillar Inc.","Cboe","Charles River Associates (CRA)","Chase","Chicago Trading Company","Chubb","Circle","Citadel","Cna Financial Corp","Codal","Crowe","DL Trading","DRW","Deloitte","Elevance Health","Enova","Equity Residential","Ernst & Young","FHLBank Chicago","FOX","FactSet","Fairlife","GCM Grosvenor","Geico","Gelber Group","Geneva Trading","Google","Grant Thornton","Guidehouse","HCSC","HNTB","Hartford Financial Services","Home Chef","IMC","IMC Trading","Inmar Intelligence","Invenergy","JP Morgan Chase","Jones Lang LaSalle (JLL)","Jump Trading","Marsh","Maven Securities","McDonald's","Morningstar","Motorola","Neuberger Berman","NinjaTrader","Northern Trust","OCC","Optiver","Origami Risk","PricewaterhouseCoopers (PwC)","Prologis","RSM","Radix Trading","SageSure","Stevens Capital Management","StoneX Group","Susquehanna International Group (SIG)","The Boeing Company","The Federal Reserve System","Thermo Fisher Scientific","TransMarket Group","TransUnion","Trillium","Vail Systems","Virtu Financial","Vizient","W.W. Grainger","Wipfli"],"coords":[41.8375,-87.6866]}},
 {"location":"Austin, TX","data":
 {"jobs":154,"quant":13,"swe":60,"hardware":38,"datascience_ml":43,"companies":["3M","ASML","AT&T","Accenture","Adobe","Apex Fintech Solutions","Applied Materials","Arrive Logistics","Base Power","Bumble","CACI","CDK","CDK Global","Cerity Partners","CesiumAstro","Charles Schwab","Chase","Cigna Group","Circle","Cirrus Logic","Cloudflare","Confluent","Cotiviti","Crowdstrike","Dell Technologies","Dimensional Fund Advisors","Electronic Arts","Emerson Electric","Ericsson","Expedia Group","FactSet","Findhelp, A Public Benefit Corporation","General Motors","GlobalFoundries","Google","Guidehouse","HNTB","IBM","Intel","Inventing for Life","JP Morgan Chase","Keysight Technologies","LPL Financial Holdings","Micron Technology","MongoDB","NXP Semiconductors","Optiver","Oracle","Q2","Realtor.com","Rivos","Roku","SailPoint","Samsung","Schonfeld","Siemens","Silicon Laboratories","Skyworks","TEL","Tenstorrent","Token Metrics","Tokyo Electron","Trend Micro","VetsEZ","Virtu Financial","Visa"],"coords":[30.3005,-97.7522]}},
+{"location":"Toronto, ON, Canada","data":
+{"jobs":149,"quant":10,"swe":59,"hardware":5,"datascience_ml":75,"companies":["Activision-Blizzard","Adobe","Altera Corporation","Amazon","Arcadis","Arch Capital Group","Autodesk","BDO Canada","BMO","Bank of Montreal","Block","Broadridge","CIBC","Capital One","Colliers","Confluent","Crane Co.","Cresta","DoorDash","Eli Lilly and Company","Fifth Third Bank","Flywheel Digital","GeoComply","Hitachi","Intact","Intuit","Investment Management Corporation of Ontario","Konrad Group","Lyft","Mackenzie Investments","Manulife Financial","Marvell","MongoDB","NimbleRx","OLG","Ontario Teachers' Pension Plan","Pinterest","Ripple","Robinhood","Rocket Lab USA","Royal Bank of Canada","Sentry","Shopify","ShyftLabs","Stripe","Sun Life","TD Bank","Tenstorrent","The Trade Desk","Ticketmaster","Uber","Visa"],"coords":[43.7417,-79.3733]}},
 {"location":"Seattle, WA","data":
 {"jobs":139,"quant":0,"swe":75,"hardware":5,"datascience_ml":59,"companies":["Adobe","Amazon","Amperity","Anduril","Atlassian","Axon","Blackrock","Block","Blue Origin","Bristol Myers Squibb","ByteDance","Centific","Circle","Collaborative Robotics","DocuSign","Docusign","DoorDash","Duolingo","Expedia Group","Google","JP Morgan Chase","MCG Health","Meta","Moloco","MongoDB","NVIDIA","Nordstrom","Oracle","Palantir","Pinterest","PricewaterhouseCoopers (PwC)","Salesforce","Slack","Stripe","The Allen Institute for AI","The Boeing Company","The Walt Disney Company","TikTok","Truveta","Uber","WhatNot"],"coords":[47.6211,-122.3244]}},
 {"location":"Boston, MA","data":
@@ -18,7 +20,7 @@
 {"location":"Mountain View, CA","data":
 {"jobs":108,"quant":0,"swe":34,"hardware":10,"datascience_ml":64,"companies":["Aurora Innovation","Databricks","General Motors","Google","Intuit","KBR","Kodiak Robotics","LinkedIn","Lunar Energy","Muon Space","Nuro","PricewaterhouseCoopers (PwC)","Reliable Robotics","Rolls Royce","Samsung Research America","Toyota Research Institute","Waymo","Wisk"],"coords":[37.4001,-122.0796]}},
 {"location":"Santa Clara, CA","data":
-{"jobs":90,"quant":0,"swe":22,"hardware":47,"datascience_ml":21,"companies":["Amazon","Celestial AI","Cohesity","Fujitsu","GlobalFoundries","Howmet Aerospace","Intel","Johnson & Johnson","KLA","Marvell","Medtronic","NVIDIA","Oracle","Pure Storage","Rivos","Roche","ServiceNow"],"coords":[37.3646,-121.968]}},
+{"jobs":90,"quant":0,"swe":22,"hardware":47,"datascience_ml":21,"companies":["Amazon","Celestial AI","Cohesity","Fujitsu","GlobalFoundries","Intel","Johnson & Johnson","KLA","Marvell","Medtronic","NVIDIA","Oracle","Pure Storage","Rivos","Roche","ServiceNow"],"coords":[37.3646,-121.968]}},
 {"location":"Sunnyvale, CA","data":
 {"jobs":76,"quant":0,"swe":47,"hardware":1,"datascience_ml":28,"companies":["CoStar Group","General Motors","Google","Hewlett Packard Enterprise","Illumio","Intuitive Surgical","Nokia","Northrop Grumman","Robert Bosch Venture Capital","Uber","Walmart","Wayve","YugaByte"],"coords":[37.3836,-122.0255]}},
 {"location":"Dallas, TX","data":
@@ -28,7 +30,7 @@
 {"location":"Houston, TX","data":
 {"jobs":64,"quant":0,"swe":25,"hardware":8,"datascience_ml":31,"companies":["ABB","AIG","Accenture","Altom Transport","Atlas Copco Group","Axiom Space","C&S Wholesale Grocers","Castleton Commodities International","Caterpillar Inc.","Chevron Corporation","ConocoPhillips","Corebridge Financial","Dow Jones","Emerson Electric","Ernst & Young","Flowserve","GE Vernova","Genesis","Grant Thornton","Guidehouse","HMH","Hewlett Packard Enterprise","Hitachi","IBM","Invesco","JP Morgan Chase","Ketjen","Persona AI","Phillips 66","PricewaterhouseCoopers (PwC)","RSM","Rockwell Automation","RoviSys","Royal Bank of Canada","S&P Global","TC Energy","Thermo Fisher Scientific","Token Metrics","Williams"],"coords":[29.786,-95.3885]}},
 {"location":"San Diego, CA","data":
-{"jobs":63,"quant":0,"swe":28,"hardware":15,"datascience_ml":20,"companies":["ASML","AeroVironment","Analog Devices","Axos Bank","BioMed Realty","Booz Allen","Bristol Myers Squibb","ByteDance","Dexcom","Exact Sciences","Google","Hologic","Innovative Defense Technologies","KeyCorp","NXP Semiconductors","Neurocrine Biosciences","Northrop Grumman","Qualcomm","RTX","ServiceNow","Shield AI","Solar Turbines","Sony","Sony Interactive Entertainment","U.S. Bancorp","Vertex Pharmaceuticals","Wealth Enhancement Group","Zoox"],"coords":[32.8313,-117.1222]}},
+{"jobs":63,"quant":0,"swe":28,"hardware":15,"datascience_ml":20,"companies":["ASML","AeroVironment","Analog Devices","Axos Bank","BioMed Realty","Booz Allen","Bristol Myers Squibb","ByteDance","Dexcom","Exact Sciences","Google","Hologic","Innovative Defense Technologies","KeyCorp","NXP Semiconductors","Neurocrine Biosciences","Northrop Grumman","Qualcomm","RTX","ServiceNow","Shield AI","Solar Turbines","Sony","Sony Interactive Entertainment","Vertex Pharmaceuticals","Wealth Enhancement Group","Zoox"],"coords":[32.8313,-117.1222]}},
 {"location":"Los Angeles, CA","data":
 {"jobs":60,"quant":4,"swe":25,"hardware":2,"datascience_ml":29,"companies":["Accenture","Altruist","Amgen","AnySignal","Arup","Blue Origin","Boston Consulting Group","Capital Group","Circle","Creative Artists Agency","DoorDash","Electronic Arts","Ernst & Young","FOX","Fehr & Peers","Freeform","Google","Grant Thornton","Guidehouse","Hermeus","Lightspark","Match Group","Netflix","Oaktree Capital Management","Paramount Global","PricewaterhouseCoopers (PwC)","Quantbot Technologies","RSM","Riot Games","Scanline VFX","Skyryse","Snap","Takeda","TikTok","United Talent Agency","WhatNot"],"coords":[34.1141,-118.4068]}},
 {"location":"Redmond, WA","data":
@@ -43,6 +45,8 @@
 {"jobs":56,"quant":0,"swe":19,"hardware":7,"datascience_ml":30,"companies":["Gilead Sciences","IXL Learning","Motorola","Replit","Roblox","Skild AI","Skydio","Verkada","Visa","WisdomAI","Zoox"],"coords":[37.5522,-122.3121]}},
 {"location":"Irvine, CA","data":
 {"jobs":55,"quant":1,"swe":23,"hardware":14,"datascience_ml":17,"companies":["AbbVie","Anduril","Blizzard Entertainment","CoStar Group","Comcast","Cox","Google","Johnson & Johnson","Learfield Amplify","MKS Instruments","Marvell","Masimo","Medtronic","Obsidian Entertainment","RSM","Rivian","Samsung Research America","Sandisk","Santander","Skyworks","SpaceX","The Trade Desk","Verizon Communications","Walker & Dunlop"],"coords":[33.6772,-117.7738]}},
+{"location":"Ottawa, ON, Canada","data":
+{"jobs":54,"quant":0,"swe":18,"hardware":20,"datascience_ml":16,"companies":["Analog Devices","BDO Canada","CAE","Ciena","Entrust","General Dynamics UK","Kinaxis","Lumentum","Marvell","Nokia","RTX","Semtech","Skyworks"],"coords":[45.4247,-75.695]}},
 {"location":"Charlotte, NC","data":
 {"jobs":53,"quant":7,"swe":19,"hardware":0,"datascience_ml":27,"companies":["AIG","Accenture","Advocate Health Care","Allstate Insurance Company","Atrium Health","Bank of America","Computershare","Corning","Credit Karma","DP World","Dimensional Fund Advisors","Equitable Holdings","Ernst & Young","FactSet","Grant Thornton","Guidehouse","HNTB","Hartford Financial Services","Intapp","OneMain Financial","Parsons","Red Ventures","Ryan","Spectrum","Truist","U.S. Bank","USAA","Vanguard","Wells Fargo"],"coords":[35.2083,-80.8303]}},
 {"location":"Reston, VA","data":
@@ -55,12 +59,16 @@
 {"jobs":48,"quant":0,"swe":16,"hardware":3,"datascience_ml":29,"companies":["Allegheny County","Aurora Innovation","BNY","Bank of New York Mellon","Carnegie Mellon University","Caterpillar Inc.","Covestro","Dick's Sporting Goods","Duolingo","First National Bank","Fortive","Google","HNTB","Highmark Health","Hitachi Energy","Howmet Aerospace","Innovative Systems","Motional AD","Oshkosh","Raymond James Financial","Robert Bosch Venture Capital","Smith+Nephew","StackAV","Steel Dynamics","Thermo Fisher Scientific","Triple","Williams"],"coords":[40.4397,-79.9763]}},
 {"location":"Minneapolis, MN","data":
 {"jobs":47,"quant":1,"swe":14,"hardware":6,"datascience_ml":26,"companies":["AeroVironment","HNTB","Inspire","Inspire Medical Systems","Medtronic","Micron Technology","Montenson","PricewaterhouseCoopers (PwC)","Procter & Gamble (P&G)","RSM","Royal Bank of Canada","SPS Commerce","Sherwin-Williams","The Federal Reserve System","Thomson Reuters","Thrivent","Trane Technologies","U.S. Bancorp","Wipfli","Xcel Energy"],"coords":[44.9635,-93.2678]}},
+{"location":"Montreal, QC, Canada","data":
+{"jobs":42,"quant":1,"swe":16,"hardware":2,"datascience_ml":23,"companies":["Autodesk","BDO Canada","CAE","Electronic Arts","Epic Games","Intact","Intelcom | Dragonfly","Lyft","Meta","Nestle","Secretariat","Shopify","Squarepoint Capital","TD Bank","Tower Research Capital","Veolia"],"coords":[45.5089,-73.5617]}},
 {"location":"Bellevue, WA","data":
-{"jobs":42,"quant":0,"swe":22,"hardware":1,"datascience_ml":19,"companies":["Amazon","Databricks","Epic Games","GE Vernova","Google","HNTB","LinkedIn","Meta","Paccar","Robinhood","T-Mobile","Tanium","Tencent","The Boeing Company","The Trade Desk","USAFacts","UiPath","Visa"],"coords":[47.5951,-122.1535]}},
+{"jobs":42,"quant":0,"swe":22,"hardware":1,"datascience_ml":19,"companies":["Amazon","CIBC","Databricks","Epic Games","GE Vernova","Google","HNTB","LinkedIn","Meta","Paccar","Robinhood","T-Mobile","Tanium","Tencent","The Boeing Company","The Trade Desk","USAFacts","UiPath","Visa"],"coords":[47.5951,-122.1535]}},
 {"location":"Cedar Rapids, IA","data":
 {"jobs":41,"quant":0,"swe":7,"hardware":29,"datascience_ml":5,"companies":["BAE Systems","GreatAmerica","Ingredion","RTX","Skyworks","Wabtec"],"coords":[41.9662,-91.6783]}},
 {"location":"Madison, WI","data":
 {"jobs":40,"quant":2,"swe":13,"hardware":3,"datascience_ml":22,"companies":["Baird","Catalent","Epic","Exact Sciences","GE Healthcare","Google","HNTB","Nelnet","QBE Insurance","SCS Engineers","Sentry Insurance","State of Wisconsin Investment Board","TREK","Thermo Fisher Scientific","TruStage"],"coords":[43.0822,-89.393]}},
+{"location":"Vancouver, BC, Canada","data":
+{"jobs":40,"quant":1,"swe":27,"hardware":0,"datascience_ml":12,"companies":["Arc'teryx Equipment","Autodesk","BDO Canada","British Columbia Investment","Electronic Arts","Epic Games","Hewlett Packard (HP)","Motorola","Rivian","Roblox","Royal Bank of Canada","Seaspan","The Walt Disney Company","Visier Solutions"],"coords":[49.25,-123.1]}},
 {"location":"Denver, CO","data":
 {"jobs":39,"quant":1,"swe":17,"hardware":3,"datascience_ml":18,"companies":["Amazon","CACI","CenturyLink","Cerity Partners","Gusto","Ibotta","Lumen Technologies","Nasdaq","Ovintiv","Palantir","Plante Moran","Prologis","Quanta Services","SNC-Lavalin","The Trade Desk","United Launch Alliance","Western Union","Xcel Energy","Xcimer Energy","ibotta"],"coords":[39.762,-104.8758]}},
 {"location":"Raleigh, NC","data":
@@ -72,7 +80,7 @@
 {"location":"Richardson, TX","data":
 {"jobs":36,"quant":0,"swe":27,"hardware":2,"datascience_ml":7,"companies":["Geico","L3Harris Technologies","Lennox International","Micron Technology","Qorvo","RESPEC","RTX"],"coords":[32.9716,-96.7093]}},
 {"location":"Des Moines, IA","data":
-{"jobs":35,"quant":0,"swe":14,"hardware":0,"datascience_ml":21,"companies":["Berkshire Hathaway Energy","Corteva","Corteva Agriscience","EMC Insurance","Mom's Meals","Nationwide","RSM","United Parcel Service (UPS)","Wellmark","Wells Fargo"],"coords":[41.5725,-93.6105]}},
+{"jobs":35,"quant":0,"swe":14,"hardware":0,"datascience_ml":21,"companies":["Berkshire Hathaway Energy","Corteva","Corteva Agriscience","EMC Insurance","Mom's Meals","Nationwide","RSM","Wellmark","Wells Fargo"],"coords":[41.5725,-93.6105]}},
 {"location":"Bloomington, MN","data":
 {"jobs":35,"quant":0,"swe":7,"hardware":5,"datascience_ml":23,"companies":["Cigna Group","Donaldson Company","General Dynamics Mission Systems","IDeaS","Seagate Technology","The Toro Company","Trane Technologies"],"coords":[44.8306,-93.3151]}},
 {"location":"Waukegan, IL","data":
@@ -80,13 +88,13 @@
 {"location":"Cincinnati, OH","data":
 {"jobs":32,"quant":0,"swe":14,"hardware":4,"datascience_ml":14,"companies":["84.51 Degrees","Ernst & Young","Fifth Third Bank","Great American Insurance","Great American Insurance Company","Johnson & Johnson","Medpace, Inc.","P&G","P&G Careers","Procter & Gamble (P&G)","U.S. Bancorp","Western & Southern Financial Group"],"coords":[39.1413,-84.506]}},
 {"location":"Morrisville, NC","data":
-{"jobs":31,"quant":0,"swe":12,"hardware":5,"datascience_ml":14,"companies":["ABB","Axon","Cadence Design Systems","Deutsche Bank","Epic Games","General Dynamics Mission Systems","JMP Statistical Discovery","Marvell","Rambus","SAS","ServiceNow","The Walt Disney Company"],"coords":[35.8368,-78.8348]}},
+{"jobs":31,"quant":0,"swe":12,"hardware":5,"datascience_ml":14,"companies":["ABB","Cadence Design Systems","Deutsche Bank","Epic Games","JMP Statistical Discovery","Marvell","Rambus","SAS","The Walt Disney Company"],"coords":[35.8368,-78.8348]}},
 {"location":"Huntsville, AL","data":
 {"jobs":31,"quant":0,"swe":11,"hardware":14,"datascience_ml":6,"companies":["AeroVironment","Amentum","Booz Allen","Integration Innovation (i3)","KBR","L3Harris Technologies","Leidos","Northrop Grumman","Parsons","RTX","The Boeing Company","Vertiv"],"coords":[34.6981,-86.6412]}},
 {"location":"Irving, TX","data":
 {"jobs":30,"quant":1,"swe":12,"hardware":0,"datascience_ml":17,"companies":["7-Eleven","Accenture","Citi","GM financial","Gartner","Heidelberg Materials","Johnson & Johnson","McKesson","Michaels Stores","Verizon Communications","Vistra","Vizient"],"coords":[32.8583,-96.9702]}},
 {"location":"McLean, VA","data":
-{"jobs":30,"quant":2,"swe":14,"hardware":0,"datascience_ml":14,"companies":["Appian","Attain Partners","Booz Allen","Capital One","Ernst & Young","Freddie Mac","Guidehouse","Iridium Communications","Leidos","United Parcel Service (UPS)"],"coords":[38.9436,-77.1943]}},
+{"jobs":30,"quant":2,"swe":14,"hardware":0,"datascience_ml":14,"companies":["Appian","Attain Partners","Booz Allen","Capital One","Ernst & Young","Freddie Mac","Guidehouse","Iridium Communications","Leidos","RSM"],"coords":[38.9436,-77.1943]}},
 {"location":"Miami, FL","data":
 {"jobs":29,"quant":10,"swe":8,"hardware":1,"datascience_ml":10,"companies":["Barry's","Blackrock","Circle","Citadel","Citadel Securities","Ernst & Young","Fidelity Investments","Gannet Fleming","Johnson & Johnson","Lennar Corporation","NBCUniversal","NextEra Energy","PricewaterhouseCoopers (PwC)","Quantbot Technologies","Trillium","VetsEZ","Walleye Capital","World Kinect"],"coords":[25.784,-80.2101]}},
 {"location":"California","data":
@@ -95,6 +103,8 @@
 {"jobs":28,"quant":0,"swe":7,"hardware":3,"datascience_ml":18,"companies":["Centene","Corteva","EMC Insurance","Emerson Electric","Highmark Health","Lennox International","Motorola","RTX","Zurich Insurance"]}},
 {"location":"Morton Grove, IL","data":
 {"jobs":28,"quant":0,"swe":12,"hardware":4,"datascience_ml":12,"companies":["Marmon Holdings","Shure","Uline"],"coords":[42.0423,-87.789]}},
+{"location":"Markham, ON, Canada","data":
+{"jobs":27,"quant":0,"swe":2,"hardware":8,"datascience_ml":17,"companies":["Chubb","GE Vernova","General Motors","Honeywell","Johnson & Johnson","Perseus Group","Qualcomm"],"coords":[43.8767,-79.2633]}},
 {"location":"Schenectady, NY","data":
 {"jobs":26,"quant":0,"swe":3,"hardware":1,"datascience_ml":22,"companies":["GE Aerospace","GE Vernova","Jahnel Group","Momentive"],"coords":[42.8025,-73.9275]}},
 {"location":"Greensboro, NC","data":
@@ -184,7 +194,7 @@
 {"location":"Northbrook, IL","data":
 {"jobs":17,"quant":0,"swe":8,"hardware":0,"datascience_ml":9,"companies":["Allstate Insurance Company","CVS Health","Medline"],"coords":[42.1292,-87.8352]}},
 {"location":"San Carlos, CA","data":
-{"jobs":17,"quant":0,"swe":11,"hardware":0,"datascience_ml":6,"companies":["AstraZeneca","C3.ai","Electronic Arts","Garage","Moloco","NimbleRx","Oracle"],"coords":[37.4982,-122.2677]}},
+{"jobs":17,"quant":0,"swe":11,"hardware":0,"datascience_ml":6,"companies":["AstraZeneca","C3.ai","Electronic Arts","Moloco","NimbleRx","Oracle"],"coords":[37.4982,-122.2677]}},
 {"location":"New Mexico","data":
 {"jobs":17,"quant":0,"swe":4,"hardware":0,"datascience_ml":13,"companies":["Centene","Highmark Health"]}},
 {"location":"Texas","data":
@@ -195,6 +205,8 @@
 {"jobs":17,"quant":0,"swe":4,"hardware":0,"datascience_ml":13,"companies":["FMC Corporation","Highmark Health"]}},
 {"location":"Colorado","data":
 {"jobs":17,"quant":0,"swe":4,"hardware":1,"datascience_ml":12,"companies":["Banner Health","Blue Origin","Centene","Highmark Health","Wilbur-Ellis"],"coords":[-22.8378,-51.9728]}},
+{"location":"Kanata, Ottawa, ON, Canada","data":
+{"jobs":17,"quant":0,"swe":0,"hardware":16,"datascience_ml":1,"companies":["Honeywell","NXP Semiconductors","Wind River"],"coords":[45.3333,-75.9]}},
 {"location":"Omaha, NE","data":
 {"jobs":16,"quant":1,"swe":8,"hardware":0,"datascience_ml":7,"companies":["Axos Bank","Berkshire Hathaway Energy","BlueCross BlueShield of Nebraska","CACI","Conagra Brands","FNBO","GE Appliances","Leidos","National Indemnity Company","Tidal Financial Group","Workshop"],"coords":[41.2627,-96.0529]}},
 {"location":"Tampa, FL","data":
@@ -223,6 +235,8 @@
 {"jobs":16,"quant":0,"swe":3,"hardware":0,"datascience_ml":13,"companies":["Centene","Highmark Health","Motorola","NRG Energy"]}},
 {"location":"Michigan","data":
 {"jobs":16,"quant":0,"swe":3,"hardware":0,"datascience_ml":13,"companies":["CMS Energy","Cleveland-Cliffs","Highmark Health","Motorola","Rocket Companies"]}},
+{"location":"Calgary, AB, Canada","data":
+{"jobs":16,"quant":0,"swe":5,"hardware":4,"datascience_ml":7,"companies":["ATCO","BDO Canada","General Dynamics UK","Hexagon AB","RSM","S&P Global","TC Energy"],"coords":[51.05,-114.0667]}},
 {"location":"Orlando, FL","data":
 {"jobs":15,"quant":0,"swe":8,"hardware":2,"datascience_ml":5,"companies":["Comcast","Electronic Arts","L3Harris Technologies","Oshkosh","ServiceNow","Stantec","The Walt Disney Company","cencora"],"coords":[28.4773,-81.337]}},
 {"location":"Santa Rosa, CA","data":
@@ -329,6 +343,8 @@
 {"jobs":11,"quant":0,"swe":6,"hardware":2,"datascience_ml":3,"companies":["Geico","Howard Hughes Medical Institute (HHMI)","Leidos"],"coords":[38.9866,-77.1188]}},
 {"location":"Newark, CA","data":
 {"jobs":11,"quant":0,"swe":3,"hardware":4,"datascience_ml":4,"companies":["Lucid Motors"],"coords":[37.5201,-122.0307]}},
+{"location":"Mississauga, ON, Canada","data":
+{"jobs":11,"quant":0,"swe":2,"hardware":0,"datascience_ml":9,"companies":["IKO","RTX","Roche","Royal Bank of Canada","Thermo Fisher Scientific","Xylem"],"coords":[43.6,-79.65]}},
 {"location":"Indiana","data":
 {"jobs":11,"quant":0,"swe":3,"hardware":0,"datascience_ml":8,"companies":["Highmark Health"]}},
 {"location":"Morristown, NJ","data":
@@ -397,6 +413,8 @@
 {"jobs":8,"quant":2,"swe":4,"hardware":0,"datascience_ml":2,"companies":["Vanguard"]}},
 {"location":"Markham, IL","data":
 {"jobs":8,"quant":0,"swe":8,"hardware":0,"datascience_ml":0,"companies":["Altom Transport","NiSource"],"coords":[41.6,-87.6904]}},
+{"location":"Oakville, ON, Canada","data":
+{"jobs":8,"quant":0,"swe":1,"hardware":3,"datascience_ml":4,"companies":["Alliaxis","BDO Canada","Ford Motor Company","Geotab"],"coords":[43.45,-79.6833]}},
 {"location":"Oxford, UK","data":
 {"jobs":8,"quant":0,"swe":6,"hardware":0,"datascience_ml":2,"companies":["Docusign","Rolls Royce","Sophos"]}},
 {"location":"Grand Rapids, MI","data":
@@ -425,6 +443,8 @@
 {"jobs":8,"quant":0,"swe":4,"hardware":2,"datascience_ml":2,"companies":["Moog","Peraton"],"coords":[37.23,-80.4279]}},
 {"location":"Germantown, MD","data":
 {"jobs":8,"quant":0,"swe":3,"hardware":4,"datascience_ml":1,"companies":["AeroVironment","DIRECTV","Viavi Solutions","Wabtec"],"coords":[39.1755,-77.2643]}},
+{"location":"Hamilton, ON, Canada","data":
+{"jobs":8,"quant":0,"swe":2,"hardware":5,"datascience_ml":1,"companies":["L3Harris Technologies"],"coords":[43.2567,-79.8692]}},
 {"location":"Elmira, NY","data":
 {"jobs":8,"quant":0,"swe":0,"hardware":0,"datascience_ml":8,"companies":["Corning"],"coords":[42.0938,-76.8097]}},
 {"location":"Western Springs, IL","data":
@@ -549,6 +569,8 @@
 {"jobs":5,"quant":0,"swe":3,"hardware":1,"datascience_ml":1,"companies":["Edison International","Northrop Grumman"],"coords":[34.5944,-118.1057]}},
 {"location":"Westminster, CO","data":
 {"jobs":5,"quant":0,"swe":3,"hardware":2,"datascience_ml":0,"companies":["CACI","CesiumAstro","Motorola","Trimble"],"coords":[39.8837,-105.0624]}},
+{"location":"Canada","data":
+{"jobs":5,"quant":0,"swe":3,"hardware":2,"datascience_ml":0,"companies":["Motorola","Nokia","Varian"]}},
 {"location":"Celebration, FL","data":
 {"jobs":5,"quant":0,"swe":2,"hardware":0,"datascience_ml":3,"companies":["The Walt Disney Company"],"coords":[28.3102,-81.551]}},
 {"location":"Peabody, MA","data":
@@ -639,6 +661,8 @@
 {"jobs":4,"quant":0,"swe":2,"hardware":1,"datascience_ml":1,"companies":["Edison International","L3Harris Technologies","RTX","The Walt Disney Company"],"coords":[33.839,-117.8574]}},
 {"location":"Rancho Cordova, CA","data":
 {"jobs":4,"quant":0,"swe":2,"hardware":0,"datascience_ml":2,"companies":["Blue Shield of California","Solidigm"],"coords":[38.5737,-121.2527]}},
+{"location":"Kitchener, ON, Canada","data":
+{"jobs":4,"quant":0,"swe":2,"hardware":1,"datascience_ml":1,"companies":["Geotab","Manulife Financial","Oracle"],"coords":[43.4186,-80.4728]}},
 {"location":"Nashua, NH","data":
 {"jobs":4,"quant":0,"swe":4,"hardware":0,"datascience_ml":0,"companies":["BAE Systems"],"coords":[42.7491,-71.491]}},
 {"location":"Hudson, NH","data":
@@ -648,7 +672,7 @@
 {"location":"Brooklyn, OH","data":
 {"jobs":4,"quant":0,"swe":1,"hardware":0,"datascience_ml":3,"companies":["KeyBank","KeyCorp","Motorola"],"coords":[41.4349,-81.7497]}},
 {"location":"Guildford, UK","data":
-{"jobs":4,"quant":0,"swe":4,"hardware":0,"datascience_ml":0,"companies":["Electronic Arts","Waymo"]}},
+{"jobs":4,"quant":0,"swe":4,"hardware":0,"datascience_ml":0,"companies":["Electronic Arts"]}},
 {"location":"Lenexa, KS","data":
 {"jobs":4,"quant":0,"swe":2,"hardware":2,"datascience_ml":0,"companies":["Geico","RTX","Thermo Fisher Scientific","Veterans United"],"coords":[38.9609,-94.8018]}},
 {"location":"Duluth, GA","data":
@@ -685,6 +709,8 @@
 {"jobs":4,"quant":0,"swe":1,"hardware":0,"datascience_ml":3,"companies":["Dayton Freight Lines","General Dynamics"]}},
 {"location":"Holland, MI","data":
 {"jobs":4,"quant":0,"swe":1,"hardware":1,"datascience_ml":2,"companies":["Hitachi Energy","MillerKnoll"],"coords":[42.7677,-86.0984]}},
+{"location":"British Columbia, Canada","data":
+{"jobs":4,"quant":0,"swe":2,"hardware":0,"datascience_ml":2,"companies":["Atlassian"]}},
 {"location":"Norwood, MA","data":
 {"jobs":4,"quant":0,"swe":2,"hardware":0,"datascience_ml":2,"companies":["Citizens Financial Group","Moderna"],"coords":[42.1861,-71.1948]}},
 {"location":"Tulsa, OK","data":
@@ -719,6 +745,8 @@
 {"jobs":4,"quant":0,"swe":0,"hardware":4,"datascience_ml":0,"companies":["ASML"]}},
 {"location":"Winona, MN","data":
 {"jobs":4,"quant":0,"swe":0,"hardware":2,"datascience_ml":2,"companies":["Trane Technologies"],"coords":[44.0505,-91.6684]}},
+{"location":"Richmond, BC, Canada","data":
+{"jobs":4,"quant":0,"swe":0,"hardware":1,"datascience_ml":3,"companies":["MKS Instruments","The Boeing Company"],"coords":[49.1667,-123.1333]}},
 {"location":"Portage, MI","data":
 {"jobs":4,"quant":0,"swe":0,"hardware":1,"datascience_ml":3,"companies":["RoviSys","Stryker"],"coords":[42.2,-85.5906]}},
 {"location":"Fremont, CA","data":
@@ -741,6 +769,8 @@
 {"jobs":4,"quant":0,"swe":0,"hardware":0,"datascience_ml":4,"companies":["Ingredion"],"coords":[41.8245,-87.847]}},
 {"location":"Franklin, TN","data":
 {"jobs":4,"quant":0,"swe":0,"hardware":0,"datascience_ml":4,"companies":["Nissan","Nissan Global"],"coords":[35.92,-86.8516]}},
+{"location":"St. John's, NL, Canada","data":
+{"jobs":3,"quant":0,"swe":2,"hardware":0,"datascience_ml":1,"companies":["CoLab Software","Standard Aero"],"coords":[47.4817,-52.7971]}},
 {"location":"Frisco, TX","data":
 {"jobs":3,"quant":0,"swe":1,"hardware":0,"datascience_ml":2,"companies":["T-Mobile","Zebra Technologies"],"coords":[33.156,-96.8216]}},
 {"location":"Winston-Salem, NC","data":
@@ -752,9 +782,11 @@
 {"location":"Baltimore, MD","data":
 {"jobs":3,"quant":0,"swe":1,"hardware":0,"datascience_ml":2,"companies":["City of Baltimore","LabCorp","Northrop Grumman"],"coords":[39.3051,-76.6144]}},
 {"location":"St. Petersburg, FL","data":
-{"jobs":3,"quant":0,"swe":1,"hardware":1,"datascience_ml":1,"companies":["Jabil","RTX"],"coords":[27.7931,-82.6652]}},
+{"jobs":3,"quant":0,"swe":1,"hardware":1,"datascience_ml":1,"companies":["Jabil","Motorola","RTX"],"coords":[27.7931,-82.6652]}},
 {"location":"Syracuse, NY","data":
 {"jobs":3,"quant":0,"swe":1,"hardware":0,"datascience_ml":2,"companies":["Carrier Global","Equitable Holdings"],"coords":[43.0407,-76.1437]}},
+{"location":"Winnipeg, MB, Canada","data":
+{"jobs":3,"quant":0,"swe":2,"hardware":0,"datascience_ml":1,"companies":["Standard Aero","Varian"],"coords":[49.8844,-97.1464]}},
 {"location":"Los Gatos, CA","data":
 {"jobs":3,"quant":0,"swe":2,"hardware":0,"datascience_ml":1,"companies":["Amazon","Badger Meter","Netflix"],"coords":[37.2304,-121.9562]}},
 {"location":"Woking, UK","data":
@@ -825,6 +857,8 @@
 {"jobs":3,"quant":0,"swe":2,"hardware":0,"datascience_ml":1,"companies":["AstraZeneca","Dow Jones"],"coords":[39.1346,-77.2131]}},
 {"location":"Eagan, MN","data":
 {"jobs":3,"quant":0,"swe":2,"hardware":1,"datascience_ml":0,"companies":["Ecolab","Leidos"],"coords":[44.817,-93.1638]}},
+{"location":"Toronto, Canada","data":
+{"jobs":3,"quant":0,"swe":2,"hardware":0,"datascience_ml":1,"companies":["Blackrock","Pinterest"],"coords":[43.7417,-79.3733]}},
 {"location":"Loveland, CO","data":
 {"jobs":3,"quant":0,"swe":2,"hardware":1,"datascience_ml":0,"companies":["Keysight Technologies"],"coords":[40.4166,-105.0623]}},
 {"location":"Southern Pines, NC","data":
@@ -903,6 +937,8 @@
 {"jobs":3,"quant":0,"swe":0,"hardware":0,"datascience_ml":3,"companies":["Altice USA"],"coords":[40.7832,-73.4732]}},
 {"location":"Eau Claire, WI","data":
 {"jobs":3,"quant":0,"swe":0,"hardware":0,"datascience_ml":3,"companies":["Compeer Financial","Hewlett Packard Enterprise","Xcel Energy"],"coords":[44.8197,-91.4948]}},
+{"location":"Burnaby, BC, Canada","data":
+{"jobs":2,"quant":1,"swe":0,"hardware":0,"datascience_ml":1,"companies":["AECOM","Royal Bank of Canada"],"coords":[49.2667,-122.9667]}},
 {"location":"Newark, DE","data":
 {"jobs":2,"quant":0,"swe":1,"hardware":0,"datascience_ml":1,"companies":["Air Liquide","FMC Corporation"],"coords":[39.6776,-75.7576]}},
 {"location":"Westford, MA","data":
@@ -944,7 +980,7 @@
 {"location":"Lawrence, MA","data":
 {"jobs":2,"quant":0,"swe":1,"hardware":1,"datascience_ml":0,"companies":["Fresenius Medical Care","Voyant Photonics"],"coords":[42.7002,-71.1626]}},
 {"location":"Warwick, UK","data":
-{"jobs":2,"quant":0,"swe":1,"hardware":0,"datascience_ml":1,"companies":["Electronic Arts","Momentive"]}},
+{"jobs":2,"quant":0,"swe":1,"hardware":0,"datascience_ml":1,"companies":["Electronic Arts"]}},
 {"location":"Concord, NC","data":
 {"jobs":2,"quant":0,"swe":1,"hardware":0,"datascience_ml":1,"companies":["General Motors"],"coords":[35.3933,-80.6369]}},
 {"location":"Calgary, AB, CAN","data":
@@ -1029,6 +1065,8 @@
 {"jobs":2,"quant":0,"swe":1,"hardware":0,"datascience_ml":1,"companies":["J.M. Smucker"],"coords":[40.7838,-81.5254]}},
 {"location":"Sunrise, FL","data":
 {"jobs":2,"quant":0,"swe":1,"hardware":1,"datascience_ml":0,"companies":["AeroVironment","American Express"],"coords":[26.1547,-80.2997]}},
+{"location":"Pointe-Claire, QC, Canada","data":
+{"jobs":2,"quant":0,"swe":1,"hardware":0,"datascience_ml":1,"companies":["ABB"],"coords":[45.45,-73.8167]}},
 {"location":"North Haven, CT","data":
 {"jobs":2,"quant":0,"swe":1,"hardware":1,"datascience_ml":0,"companies":["Medtronic"]}},
 {"location":"Lafayette, CO","data":
@@ -1041,6 +1079,8 @@
 {"jobs":2,"quant":0,"swe":0,"hardware":2,"datascience_ml":0,"companies":["Thermo Fisher Scientific","X-energy"],"coords":[39.0393,-77.1191]}},
 {"location":"Gloucester, UK","data":
 {"jobs":2,"quant":0,"swe":0,"hardware":2,"datascience_ml":0,"companies":["Honeywell","Moog"]}},
+{"location":"Vaughan, ON, Canada","data":
+{"jobs":2,"quant":0,"swe":0,"hardware":2,"datascience_ml":0,"companies":["Trimble"],"coords":[43.8333,-79.5]}},
 {"location":"Bristol, UK","data":
 {"jobs":2,"quant":0,"swe":0,"hardware":2,"datascience_ml":0,"companies":["IMC Trading","Qualcomm"]}},
 {"location":"Fargo, ND","data":
@@ -1079,8 +1119,12 @@
 {"jobs":2,"quant":0,"swe":0,"hardware":1,"datascience_ml":1,"companies":["PennState University"],"coords":[40.2043,-75.0915]}},
 {"location":"Cottage Grove, MN","data":
 {"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["CHS"],"coords":[44.8161,-92.9274]}},
+{"location":"Edmonton, AB, Canada","data":
+{"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["ATCO","Capital Power"],"coords":[53.5344,-113.4903]}},
 {"location":"South Plainfield, NJ","data":
 {"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["Public Service Enterprise Group"],"coords":[40.5748,-74.4152]}},
+{"location":"Nova Scotia, Canada","data":
+{"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["Royal Bank of Canada"]}},
 {"location":"Roanoke, VA","data":
 {"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["AECOM","Steel Dynamics"],"coords":[37.2785,-79.9581]}},
 {"location":"San Ramon, CA","data":
@@ -1093,6 +1137,8 @@
 {"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["Centene","Highmark Health"]}},
 {"location":"Logan, UT","data":
 {"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["Space Dynamics Laboratory","Thermo Fisher Scientific"],"coords":[41.7399,-111.8422]}},
+{"location":"North York, ON, Canada","data":
+{"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["Nestle"]}},
 {"location":"Las Vegas, NV","data":
 {"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["HNTB","Nevada National Security"],"coords":[36.2333,-115.2654]}},
 {"location":"Clifton Park, NY","data":
@@ -1105,6 +1151,8 @@
 {"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["Altice USA"],"coords":[42.5035,-71.0656]}},
 {"location":"Wright-Patterson AFB, OH","data":
 {"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["Apogee Engineering","SciTec"]}},
+{"location":"Squamish, BC, Canada","data":
+{"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["Occidental Petroleum"],"coords":[49.7017,-123.1589]}},
 {"location":"Frederick, MD","data":
 {"jobs":2,"quant":0,"swe":0,"hardware":0,"datascience_ml":2,"companies":["Oshkosh"],"coords":[39.4337,-77.4141]}},
 {"location":"Ogden, UT","data":
@@ -1127,6 +1175,14 @@
 {"jobs":1,"quant":1,"swe":0,"hardware":0,"datascience_ml":0,"companies":["StoneX Group"],"coords":[28.5989,-81.3442]}},
 {"location":"Englewood, NJ","data":
 {"jobs":1,"quant":1,"swe":0,"hardware":0,"datascience_ml":0,"companies":["Walker & Dunlop"],"coords":[40.8917,-73.9736]}},
+{"location":"Langley, BC, Canada","data":
+{"jobs":1,"quant":1,"swe":0,"hardware":0,"datascience_ml":0,"companies":["Royal Bank of Canada"],"coords":[49.0987,-122.6597]}},
+{"location":"Surrey, BC, Canada","data":
+{"jobs":1,"quant":1,"swe":0,"hardware":0,"datascience_ml":0,"companies":["Royal Bank of Canada"],"coords":[49.19,-122.8489]}},
+{"location":"Port Coquitlam, BC, Canada","data":
+{"jobs":1,"quant":1,"swe":0,"hardware":0,"datascience_ml":0,"companies":["Royal Bank of Canada"],"coords":[49.2625,-122.7811]}},
+{"location":"Abbotsford, BC, Canada","data":
+{"jobs":1,"quant":1,"swe":0,"hardware":0,"datascience_ml":0,"companies":["Royal Bank of Canada"],"coords":[49.05,-122.3167]}},
 {"location":"Palatine, IL","data":
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Northrop Grumman"],"coords":[42.118,-88.043]}},
 {"location":"Shrewsbury, NJ","data":
@@ -1145,6 +1201,8 @@
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["The Walt Disney Company"]}},
 {"location":"Torrance, CA","data":
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Moog"],"coords":[33.8346,-118.3416]}},
+{"location":"Gatineau, QC, Canada","data":
+{"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Motorola"],"coords":[45.4833,-75.65]}},
 {"location":"Dolores, CO","data":
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["AGILE Space Industries"]}},
 {"location":"Hammond, IN","data":
@@ -1319,6 +1377,8 @@
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["IBM"]}},
 {"location":"Statewide, MA","data":
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["IBM"]}},
+{"location":"Laval, QC, Canada","data":
+{"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Airbus"],"coords":[45.5833,-73.75]}},
 {"location":"Coppell, TX","data":
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Newrez"],"coords":[32.9639,-96.9903]}},
 {"location":"Lakeland, FL","data":
@@ -1347,12 +1407,16 @@
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Johnson & Johnson"]}},
 {"location":"Dakota Dunes, SD","data":
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Empirical"]}},
+{"location":"Newmarket, ON, Canada","data":
+{"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Magna"],"coords":[44.05,-79.4667]}},
 {"location":"Golden Valley, MN","data":
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Pentair"],"coords":[44.9901,-93.3591]}},
 {"location":"Mississauga, ON, CAN","data":
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Holman"]}},
 {"location":"Cedar Falls, IA","data":
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["SciPlay"],"coords":[42.5195,-92.4536]}},
+{"location":"Alberta, Canada","data":
+{"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["DotDash Meredith"]}},
 {"location":"Iselin, NJ","data":
 {"jobs":1,"quant":0,"swe":1,"hardware":0,"datascience_ml":0,"companies":["Wells Fargo"],"coords":[40.5697,-74.3172]}},
 {"location":"Jersey City, NJ","data":
@@ -1485,12 +1549,16 @@
 {"jobs":1,"quant":0,"swe":0,"hardware":1,"datascience_ml":0,"companies":["AeroVironment"],"coords":[39.801,-84.0094]}},
 {"location":"Bastrop, TX Irvine, CA Cape Canaveral, FL Brownsville, TX Redmond, WA McGregor, TX West Athens, CA Sunnyvale, CA","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":1,"datascience_ml":0,"companies":["SpaceX"]}},
+{"location":"Barrie, ON, Canada","data":
+{"jobs":1,"quant":0,"swe":0,"hardware":1,"datascience_ml":0,"companies":["RTX"],"coords":[44.3711,-79.6769]}},
 {"location":"Las Cruces, NM","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":1,"datascience_ml":0,"companies":["Leidos"],"coords":[32.3265,-106.7893]}},
 {"location":"South Houston, TX","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":1,"datascience_ml":0,"companies":["Flowserve"],"coords":[29.6611,-95.2285]}},
 {"location":"Newton, MA","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":1,"datascience_ml":0,"companies":["Medtronic"],"coords":[42.3316,-71.2085]}},
+{"location":"Cambridge, ON, Canada","data":
+{"jobs":1,"quant":0,"swe":0,"hardware":1,"datascience_ml":0,"companies":["Rockwell Automation"],"coords":[43.3972,-80.3114]}},
 {"location":"Lynnwood, WA","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Crane Co."],"coords":[47.8284,-122.3033]}},
 {"location":"Reading, PA","data":
@@ -1501,6 +1569,10 @@
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Teledyne"],"coords":[34.223,-119.0321]}},
 {"location":"San Luis Obispo, CA","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Entegris"],"coords":[35.2669,-120.669]}},
+{"location":"Grande Prairie, AB, Canada","data":
+{"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["ATCO"],"coords":[55.1708,-118.7947]}},
+{"location":"Kitscoty, AB, Canada","data":
+{"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["ATCO"]}},
 {"location":"Maryville, TN","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Clayton"],"coords":[35.7468,-83.9789]}},
 {"location":"Bristol, PA","data":
@@ -1563,6 +1635,8 @@
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Commonwealth Fusion Systems"]}},
 {"location":"New Britain, CT","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Eversource Energy"],"coords":[41.6759,-72.7862]}},
+{"location":"Saint John, NB, Canada","data":
+{"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Stantec"],"coords":[45.2806,-66.0761]}},
 {"location":"Oxnard, CA","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Rolls Royce"],"coords":[34.1964,-119.1815]}},
 {"location":"Doylestown, PA","data":
@@ -1587,6 +1661,8 @@
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Clarios"],"coords":[41.6638,-83.5827]}},
 {"location":"St Joseph, MO","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Elanco"]}},
+{"location":"Alberton, PE, Canada","data":
+{"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Standard Aero"],"coords":[-26.2672,28.1219]}},
 {"location":"Thief River Falls, MN","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["DigiKey"],"coords":[48.1108,-96.1778]}},
 {"location":"St. Charles, IL","data":
@@ -1641,10 +1717,14 @@
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["First Quality"],"coords":[34.5211,-82.6478]}},
 {"location":"Attleboro, MA","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Sensata"],"coords":[41.9311,-71.295]}},
+{"location":"Ontario, Canada","data":
+{"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Mackenzie Investments"]}},
 {"location":"Hyattsville, MD","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Adobe"],"coords":[38.9613,-76.9548]}},
 {"location":"Jefferson City, MO","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Bartlett & West"],"coords":[38.5676,-92.1759]}},
+{"location":"Victoria, BC, Canada","data":
+{"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["British Columbia Investment"],"coords":[48.4283,-123.3647]}},
 {"location":"Amarillo, TX","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Xcel Energy"],"coords":[35.1984,-101.8316]}},
 {"location":"Nottingham, UK","data":
@@ -1655,6 +1735,8 @@
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["RTX"],"coords":[35.0699,-80.6452]}},
 {"location":"Inglewood, CA","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Los Angeles Clippers"],"coords":[33.9566,-118.3444]}},
+{"location":"Halifax Regional Municipality, NS, Canada","data":
+{"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["Citco"]}},
 {"location":"Washington, PA","data":
 {"jobs":1,"quant":0,"swe":0,"hardware":0,"datascience_ml":1,"companies":["TC Energy"],"coords":[39.7494,-77.5579]}},
 {"location":"Willmar, MN","data":

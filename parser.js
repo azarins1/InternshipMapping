@@ -65,7 +65,7 @@ const state_mappings = {
 };
 
 
-var usa_only = true;
+var usa_only = false;
 
 // variables to keep track of 
 var global_job_count = 0;
@@ -196,6 +196,7 @@ function get_coords() {
     return location_coords;
 }
 
+console.log(`${Object.keys(location_coords).length} total locations with coordinates`);
 
 // Write out ALL data to a JSON file - to be used in the HTML visualization!
 /**
@@ -205,8 +206,11 @@ function get_coords() {
 function write_all_data(loc_array, location_coords) {
     let data = {};
     data.cities = [];
+    // console.log('loc_array[0]',loc_array[0].location.toLowerCase().indexOf('canada'))
     for (let i = 0; i < loc_array.length; i++) {
         loc_array[i].data.coords = location_coords[loc_array[i].location];
+        if (loc_array[i].location.toLowerCase().indexOf('canada') > -1)
+            loc_array[i].data.coords = location_coords[loc_array[i].location.split(",")[0]];
         // convert companies to an array
         loc_array[i].data.companies = [...loc_array[i].data.companies].sort();
         data.cities.push(loc_array[i]);

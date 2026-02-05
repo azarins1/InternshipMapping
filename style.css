@@ -15,3 +15,13 @@ button {
     text-decoration: underline;
     font-weight: bold;
 }
+
+svg{
+    background-color: #E0E0E0;
+}
+
+.tooltip{
+    font-size: calc(16px + 0.3vw);
+    background-color: rgb(207, 207, 207);
+    border-radius: 10px;
+}
