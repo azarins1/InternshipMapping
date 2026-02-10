@@ -65,9 +65,32 @@ button {
     right: 0;
     display: inline-block;
     color: white;
-    max-width: calc(150px + 3.7vw);
+    /* max-width: calc(150px + 3.7vw); */
     padding-right: 10px;
-    font-size: calc(12px + 0.2vw);
+    font-size: calc(16px + 0.1vw);
+}
+
+#legend{
+    position: absolute;
+    bottom: calc(5vw);
+    left: 20px;
+    color: white;
+}
+#legend div{
+    display: inline-block;
+    --size: calc(10px + 0.3vw);
+    width: var(--size);
+    height: var(--size);
+    border: 2px solid white;
+    background-color: red;
+}
+#legend p {
+    display: inline-block;
+    font-size: calc(20px + 0.3vw);
+    text-align: center;
+    font-weight: 100;
+    margin: 0;
+    margin-left: 5px;
 }
 
 #quickStats p{

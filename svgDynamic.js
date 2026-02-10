@@ -204,11 +204,11 @@ function filterChart(trait, projection) {
 
     const quickStats = document.getElementById('quickStats');
     let top_regions = 0;
-    quickStats.innerHTML = 
-    `<p><b><u>${total_jobs} total roles</u></b></p>`;
-    for (let i = 0; i < 5; i++){
+    quickStats.innerHTML =
+        `<p><b><u>${total_jobs} total roles</u></b></p>`;
+    for (let i = 0; i < 5; i++) {
         let entry = document.createElement('p');
-        entry.innerHTML= `${i+1}. ${region_array[i].state}, ${region_array[i].jobs} (${Math.floor(region_array[i].jobs*100/total_jobs)}%)<br>`
+        entry.innerHTML = `${i + 1}. ${region_array[i].state}, ${region_array[i].jobs} (${Math.floor(region_array[i].jobs * 100 / total_jobs)}%)<br>`
         quickStats.appendChild(entry);
         top_regions += region_array[i].jobs;
     }
@@ -233,3 +233,20 @@ function filterChart(trait, projection) {
     if (showCities == false)
         deleteAll();
 }
+
+function createLegend() {
+    const legend = document.getElementById('legend');
+    const colors = ['rgb(255,80,80)', 'rgb(0,80,80)'];
+    const labels = ['Most Jobs', 'Least Jobs'];
+    for (let i = 0; i < 2; i++){
+        const rect = document.createElement('div');
+        rect.style.backgroundColor = colors[i];
+        legend.appendChild(rect);
+
+        const label = document.createElement('p');
+        label.innerHTML = labels[i]
+        legend.appendChild(label);
+        legend.appendChild(document.createElement('br'))
+    }
+}
+createLegend();
