@@ -52,28 +52,31 @@ export const states = {
   WI: "Wisconsin",
   WY: "Wyoming",
 
-  // AB: "Alberta",
-  // BC: "British Columbia",
-  // MB: "Manitoba",
-  // NB: "New Brunswick",
-  // NL: "Newfoundland and Labrador",
-  // NS: "Nova Scotia",
-  // NT: "Northwest Territories",
-  // NU: "Nunavut",
-  // ON: "Ontario",
-  // PE: "Prince Edward Island",
-  // QC: "Quebec",
-  // SK: "Saskatchewan",
-  // YT: "Yukon"
+  AB: "Alberta",
+  BC: "British Columbia",
+  MB: "Manitoba",
+  NB: "New Brunswick",
+  NL: "Newfoundland and Labrador",
+  NS: "Nova Scotia",
+  NT: "Northwest Territories",
+  NU: "Nunavut",
+  ON: "Ontario",
+  PE: "Prince Edward Island",
+  QC: "Quebec",
+  SK: "Saskatchewan",
+  YT: "Yukon"
 };
 
-export const fullStateNames = new Set(
-  ["Canada", "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
-    "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
-    "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts",
-    "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska",
-    "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York",
-    "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania",
-    "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah",
-    "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
-)
+let stateNames = Object.values(states);
+
+export var fullStateNames = new Set(stateNames);
+
+//   ["Canada", "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
+//     "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
+//     "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts",
+//     "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska",
+//     "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York",
+//     "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania",
+//     "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah",
+//     "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+// )

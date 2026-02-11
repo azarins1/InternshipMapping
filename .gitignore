@@ -4,3 +4,5 @@ secrets.env
 node_modules
 worldcities.csv
 geolocations.csv
+ca.json
+mx.json

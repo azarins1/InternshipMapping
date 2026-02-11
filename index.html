@@ -12,9 +12,9 @@
     <div class="textSection" id="intro">
         <img src="./Skyscrapers.jpeg">
         <div class="padded">
-            <h1 class="centerTxt">Tech Internships in United States</h1>
+            <h1 class="centerTxt">Tech Internships in North America</h1>
             <p style="text-align: center;">Arthur Zarins</p>
-            <p>This study visualizes the distribution of technology internships across the United States.</p>
+            <p>This study visualizes the distribution of technology internships across the United States and Canada.</p>
             <p>
                 One of the most popular job boards for tech jobs is <a
                     href="https://github.com/SimplifyJobs" target="_blank" rel="noopener noreferrer">Simplify</a>'s 
@@ -30,7 +30,7 @@
                     US Census Bureau</a>'s cartographic boundary files.
             </p>
             <p>
-                Within the dataset, California is the state with the most internship roles in software engineering,
+                Within the data, California is the state with the most internship roles in software engineering,
                 hardware, and data science while New York leads in quantitative finance.
                 A limitation of this study is that it counts the number of internship postings while not taking
                 into account that different internship roles will have a differing amounts of interns.
@@ -51,6 +51,9 @@
             <button id="quant_btn" class="filterBtn">Quant</button>
             <button id="datascience_ml_btn" class="filterBtn">DataScience/ML</button>
             <button id="hide_btn" class="filterBtn">Hide Cities</button>
+
+            <!-- View North America vs. View USA -->
+            <button id="projection_btn">View North America</button>
         </div>
         <div id="map-container">
             <div id="quickStats"></div>

@@ -4,6 +4,8 @@ const svgWidth = container.clientWidth;
 
 import { states, fullStateNames } from './state_names.js';
 console.log(states, fullStateNames)
+console.log(Object.values(states));
+
 
 const svg = d3.select("#map-container")
     .append("svg")
@@ -27,8 +29,16 @@ var fileName = '2010_us_census.json';
 d3.json('canada_and_usa.json').then(unitedStates => {
     // Map projection, pathGenerator, and svg append (except mouse events) generated with OpenAI ChatGPT 5
 
-    const projection = d3.geoAlbersUsa() //geoAlbersUsa
-        .fitSize([svgWidth, svgHeight], unitedStates);
+    // const projection = d3.geoAlbersUsa()
+    //     .fitSize([svgWidth, svgHeight], unitedStates);
+
+    const projection = d3.geoAlbers()
+        .parallels([29.5, 45.5])       // US-style parallels
+        .rotate([96, 0])               // center longitude
+        .center([0, 50])               // shift north to include Canada
+        .scale(1200)
+        .translate([svgWidth / 2, svgHeight / 2]);
+
     globalProjection = projection;
 
     const pathGenerator = d3.geoPath()
@@ -118,9 +128,9 @@ function filterChart(trait, projection) {
     document.getElementById(`${trait}_btn`).classList.add('selected')
 
     // Update the chart's title
-    let titleText = `Tech Internships in United States`;
+    let titleText = `Tech Internships in North America`;
     if (trait != 'jobs')
-        titleText = `${capitalizeWord(trait)} Internships in United States`;
+        titleText = `${capitalizeWord(trait)} Internships in North America`;
     document.getElementById('title').innerHTML = titleText;
 
     deleteAll(); // remove pre-existing circles from the plot
@@ -187,12 +197,15 @@ function filterChart(trait, projection) {
             .duration(500)
             .attr('r', r)
 
-        let stateName = data[i].location.split(',').at(-1).trim();
-        if (states[stateName] != undefined)
-            stateName = states[stateName];
-        if (stateStats[stateName] == undefined)
-            stateStats[stateName] = 0;
-        stateStats[stateName] += data[i].data[trait];
+
+        if (data[i].location.split(',').length >= 2) {
+            let stateName = data[i].location.split(',').at(1).trim();
+            if (states[stateName] != undefined)
+                stateName = states[stateName];
+            if (stateStats[stateName] == undefined)
+                stateStats[stateName] = 0;
+            stateStats[stateName] += data[i].data[trait];
+        }
     }
 
     let region_array = []
@@ -219,7 +232,7 @@ function filterChart(trait, projection) {
     // Color in the states
     let state_names = Object.values(states);
     for (let i = 0; i < state_names.length; i++) {
-        // console.log(state_names[i]);
+        console.log(state_names[i]);
         document.getElementById(state_names[i]).style.fill = 'rgb(0,80,80)';
     }
     console.log(region_array)
@@ -233,8 +246,6 @@ function filterChart(trait, projection) {
         document.getElementById(stateName).style.fill =
             `rgb(${scale}, 80, 80)`;
     }
-
-    document.getElementById('Canada').style.strokeWidth = '5';
 
     if (showCities == false)
         deleteAll();
