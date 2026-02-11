@@ -6,7 +6,6 @@ import { states, fullStateNames } from './state_names.js';
 console.log(states, fullStateNames)
 console.log(Object.values(states));
 
-
 const svg = d3.select("#map-container")
     .append("svg")
     .attr("width", svgWidth)
@@ -24,29 +23,48 @@ var stateStats = {};
 var globalProjection = undefined;
 var showCities = true;
 var lastTrait = '';
-
+var zoomInUSA = true;
+var globalProjection = null;
+var geoJSON_data = null;
 var fileName = '2010_us_census.json';
 d3.json('canada_and_usa.json').then(unitedStates => {
+    geoJSON_data = unitedStates;
+    createProjection(geoJSON_data);
+});
+function createProjection(data_geoJSON) {
     // Map projection, pathGenerator, and svg append (except mouse events) generated with OpenAI ChatGPT 5
 
+    let projection;
+    if (zoomInUSA) {
+        projection = d3.geoAlbersUsa()
+            .fitSize([svgWidth, svgHeight], data_geoJSON)
+    } else {
+        projection = d3.geoAlbers()
+            .parallels([29.5, 45.5])       // US-style parallels
+            .rotate([96, 0])               // center longitude
+            .center([0, 50])               // shift north to include Canada
+            .scale(1200)
+            .translate([svgWidth / 2, svgHeight / 2]);
+    }
     // const projection = d3.geoAlbersUsa()
     //     .fitSize([svgWidth, svgHeight], unitedStates);
 
-    const projection = d3.geoAlbers()
-        .parallels([29.5, 45.5])       // US-style parallels
-        .rotate([96, 0])               // center longitude
-        .center([0, 50])               // shift north to include Canada
-        .scale(1200)
-        .translate([svgWidth / 2, svgHeight / 2]);
+    // const projection = d3.geoAlbers()
+    //     .parallels([29.5, 45.5])       // US-style parallels
+    //     .rotate([96, 0])               // center longitude
+    //     .center([0, 50])               // shift north to include Canada
+    //     .scale(1200)
+    //     .translate([svgWidth / 2, svgHeight / 2]);
 
     globalProjection = projection;
 
     const pathGenerator = d3.geoPath()
         .projection(projection);
 
+    removeAllStates(); // delete any previous polygon paths
     svg.append("g")
         .selectAll("path")
-        .data(unitedStates.features)
+        .data(data_geoJSON.features)
         .enter()
         .append("path")
         .attr('id', d => d.properties.NAME)
@@ -59,7 +77,9 @@ d3.json('canada_and_usa.json').then(unitedStates => {
             tooltip.style("visibility", "visible");
             const stateName = event.currentTarget.id;
             const jobCount = stateStats[stateName];
-            if (jobCount == undefined) {
+            if (stateName == 'Mexico')
+                tooltip.html(`${stateName}`);
+            else if (jobCount == undefined) {
                 tooltip.html(`${stateName}<br><i>No roles</i>`);
             } else if (jobCount == 1) {
                 tooltip.html(`${stateName}<br><i>1 role</i>`);
@@ -78,9 +98,17 @@ d3.json('canada_and_usa.json').then(unitedStates => {
     // Draw and Parse the cities
     d3.json('internship_data.json').then(internship_data => {
         internshipData = internship_data;
-        filterChart('jobs', projection)
+        filterChart('jobs', projection) // filter cities by role
     });
-})
+
+    if (zoomInUSA){
+        // hide some Canadian provinces and Mexico
+        // document.getElementById('Yukon').style.display = 'none';
+        // document.getElementById('Northwest Territories').style.display = 'none';
+        // document.getElementById('Nunavut').style.display = 'none';
+        document.getElementById('Mexico').style.display = 'none';
+    }
+}
 
 document.getElementById('jobs_btn').addEventListener('click', () => { filterChart('jobs', globalProjection) });
 document.getElementById('swe_btn').addEventListener('click', () => { filterChart('swe', globalProjection) });
@@ -99,11 +127,20 @@ function toggleCities() {
 }
 
 // Delete all circles in the SVG
-function deleteAll() {
+function removeAllCities() {
     let circles = document.getElementsByTagName('circle');
     console.log(`Removing ${circles.length} circles`);
     for (let i = circles.length - 1; i >= 0; i--) {
         circles[i].remove();
+    }
+    console.log('done');
+}
+
+function removeAllStates() {
+    let states = document.getElementsByClassName('state');
+    console.log(`Removing ${states.length} state`);
+    for (let i = states.length - 1; i >= 0; i--) {
+        states[i].remove();
     }
     console.log('done');
 }
@@ -133,7 +170,7 @@ function filterChart(trait, projection) {
         titleText = `${capitalizeWord(trait)} Internships in North America`;
     document.getElementById('title').innerHTML = titleText;
 
-    deleteAll(); // remove pre-existing circles from the plot
+    removeAllCities(); // remove pre-existing circles from the plot
 
     stateStats = {}; // reset state stats
     const data = internshipData.cities;
@@ -232,7 +269,7 @@ function filterChart(trait, projection) {
     // Color in the states
     let state_names = Object.values(states);
     for (let i = 0; i < state_names.length; i++) {
-        console.log(state_names[i]);
+        // console.log(state_names[i]);
         document.getElementById(state_names[i]).style.fill = 'rgb(0,80,80)';
     }
     console.log(region_array)
@@ -248,7 +285,7 @@ function filterChart(trait, projection) {
     }
 
     if (showCities == false)
-        deleteAll();
+        removeAllCities();
 }
 
 function createLegend() {
@@ -268,3 +305,14 @@ function createLegend() {
     legend.appendChild(label_least);
 }
 createLegend();
+
+document.getElementById('projection_btn').addEventListener('click', () => {
+    const projectionBtn = document.getElementById('projection_btn');
+    zoomInUSA = !zoomInUSA;
+    createProjection(geoJSON_data);
+    if (zoomInUSA) {
+        projectionBtn.innerHTML = 'View North America'
+    } else {
+        projectionBtn.innerHTML = 'View United States'
+    }
+})
