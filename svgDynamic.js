@@ -112,7 +112,6 @@ function createProjection(data_geoJSON) {
             const stateName = d.properties.NAME;
             state_features[stateName] = d;
         })
-    console.log(state_features);
 
     // Draw and Parse the cities
     d3.json('internship_data.json').then(internship_data => {
@@ -155,7 +154,6 @@ function removeAllCities() {
     for (let i = circles.length - 1; i >= 0; i--) {
         circles[i].remove();
     }
-    console.log('citiesRemoved')
 }
 
 // Change radii of cities to make them smaller when zooming in
@@ -199,7 +197,6 @@ function capitalizeWord(word) {
     if (word == 'swe') return 'SWE';
     if (word == 'datascience_ml') return 'Data Sci & ML';
     let firstLetter = word[0];
-    console.log(firstLetter);
     return firstLetter.toUpperCase() + word.slice(1);
 }
 
@@ -353,7 +350,6 @@ function filterChart(trait, projection) {
     const baseNum = 80;
     let state_names = Object.values(states);
     for (let i = 0; i < state_names.length; i++) {
-        // console.log(state_names[i]);
         document.getElementById(state_names[i]).style.fill = `rgb(0,${baseNum},${baseNum})`;
     }
     for (let i = 0; i < region_array.length; i++) {
@@ -485,7 +481,6 @@ function cityStats(city) {
         div.remove();
         lowerDiv.remove();
     })
-    // console.log(cityData)
 }
 
 /**
@@ -508,7 +503,6 @@ function zoomToFeature(feature) {
     if (document.getElementById('exitBtn') != undefined)
         document.getElementById('exitBtn').click();
 
-    console.log('feature', feature);
     document.getElementById('quickStats').classList.add('hidden');
     document.getElementById('legend').classList.add('hidden');
 
@@ -516,9 +510,7 @@ function zoomToFeature(feature) {
     let x, y, scale;
 
     if (feature.geometry.type === "Point") {
-        console.log(feature.geometry.coordinates);
         const project = globalProjection(feature.geometry.coordinates);
-        console.log(project);
         [x, y] = globalProjection(feature.geometry.coordinates);
         scale = 15; // fixed zoom level
     } else {
