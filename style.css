@@ -21,6 +21,34 @@ body {
     width: 100vw;
 }
 
+#cityStats{
+    margin: calc(10px + 2vw);   
+    position: absolute;
+    padding: calc(10px + 2vw);
+    border-radius: calc(20px + 2vw);
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 50%;
+    width: min(90%, 700px);
+    background-color: rgba(255, 255, 255, 0.805);
+    overflow-y: scroll;
+}
+
+#cityStats #exitBtn{
+    font-size: calc(20px + 2vw);
+    width: calc(50px + 2vw);
+    height: calc(40px + 2vw);
+    background-color: rgb(225, 119, 119);
+    text-align: center;
+    position: absolute;
+    right: calc(15px + 1vw);
+    font-weight: 100;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding-top: 10px;
+    top: 0;
+}
+
 .state {
     fill: grey;
     stroke: white;

@@ -20,6 +20,7 @@ var internshipData = {};
 var stateStats = {}; // contains aggregated job stats
 var cities_in_state = {}; // contains list of all cities
 var companies_in_state = {}; // contains list of all companies in a state
+var city_indices = {}; // maps city name to index in dataset
 
 var globalProjection = undefined;
 var showCities = true;
@@ -27,43 +28,28 @@ var lastTrait = 'jobs';
 var showOnlyUSA = false;
 var globalProjection = null;
 var geoJSON_data = null;
-<<<<<<< HEAD
 var pathGenerator = null;
 var zoomedInState = null;
 
-=======
->>>>>>> 310b26c (Log names of all companies that have jobs in a given state)
 d3.json('canada_and_usa.json').then(unitedStates => {
     geoJSON_data = unitedStates;
     createProjection(geoJSON_data);
 });
 function createProjection(data_geoJSON) {
     // Map projection, pathGenerator, and svg append (except mouse events) generated with OpenAI ChatGPT 5
-<<<<<<< HEAD
     if (showOnlyUSA) {
-=======
-    if (zoomInUSA) {
->>>>>>> 310b26c (Log names of all companies that have jobs in a given state)
         globalProjection = d3.geoAlbersUsa()
             .fitSize([svgWidth, svgHeight], data_geoJSON)
     } else {
         globalProjection = d3.geoAlbers()
-<<<<<<< HEAD
             .parallels([29.5, 45.5])
-=======
-            .parallels([29.5, 45.5])       
->>>>>>> 310b26c (Log names of all companies that have jobs in a given state)
             .rotate([96, 0])
             .center([0, 50])
             .scale(Math.min(1200, svgWidth))
             .translate([svgWidth / 2, svgHeight / 2]);
     }
 
-<<<<<<< HEAD
     pathGenerator = d3.geoPath()
-=======
-    const pathGenerator = d3.geoPath()
->>>>>>> 310b26c (Log names of all companies that have jobs in a given state)
         .projection(globalProjection);
 
     removeAllStates(); // delete any previous polygon paths
@@ -99,9 +85,6 @@ function createProjection(data_geoJSON) {
         })
         .on("mousemove", (evt) => {
             tooltip.style("top", (evt.offsetY) + "px").style("left", (evt.offsetX + 10) + "px");
-        })
-        .on('click', (evt) => {
-            investigateState(evt.currentTarget.id);
         })
         .on('mouseleave', (event) => {
             tooltip.style("visibility", "hidden");
@@ -179,6 +162,7 @@ function changeCityRadii() {
     for (let i = 0; i < circles.length; i++) {
         const jobs = circles[i].getAttribute('TOTAL_JOBS');
         let r = 0.5 + Math.sqrt(jobs) * (svgWidth / 750) * factor;
+        if (jobs == 0) r = 0;
         d3.select(circles[i])
             .transition()
             .duration(500)
@@ -244,6 +228,7 @@ function filterChart(trait, projection) {
     for (let i = 0; i < data.length; i++) {
         // draw city
         const coords = data[i].data.coords;
+        city_indices[data[i].location] = i;
 
         if (data[i].location.indexOf('Canada') != -1 && showOnlyUSA) {
             continue; // ignore Canadian cities when zoomed into USA
@@ -295,6 +280,9 @@ function filterChart(trait, projection) {
             .on("mousemove", (evt) => {
                 tooltip.style("top", (event.offsetY) + "px").style("left", (event.offsetX + 10) + "px");
             })
+            .on('click', (evt) => {
+                cityStats(evt.currentTarget.id);
+            })
             .on('mouseleave', (event) => {
                 d3.select(event.currentTarget)
                     .attr('opacity', 0.7)
@@ -313,7 +301,7 @@ function filterChart(trait, projection) {
             if (stateStats[stateName] == undefined)
                 stateStats[stateName] = 0;
             stateStats[stateName] += data[i].data[trait];
-            if (cities_in_state[stateName] == undefined){
+            if (cities_in_state[stateName] == undefined) {
                 cities_in_state[stateName] = [];
                 companies_in_state[stateName] = new Set();
             }
@@ -396,6 +384,63 @@ document.getElementById('projection_btn').addEventListener('click', () => {
         projectionBtn.innerHTML = 'View United States'
     }
 })
+
+function cityStats(city) {
+    if (document.getElementById('cityStats') != undefined)
+        document.getElementById('cityStats').remove();
+
+    const div = document.createElement('div');
+    div.setAttribute('id', 'cityStats');
+
+    const index = city_indices[city];
+    const cityData = internshipData.cities[index];
+    const companies = cityData.data.companies;
+
+    const h1 = document.createElement('h1');
+    h1.innerHTML = `${city}`;
+    div.appendChild(h1);
+
+    const exitBtn = document.createElement('h3');
+    exitBtn.innerHTML = 'X';
+    exitBtn.setAttribute('id', 'exitBtn');
+    div.appendChild(exitBtn);
+
+    const d1 = document.createElement('p');
+    d1.innerHTML = `<b>${cityData.data.jobs} roles</b>, Rank <b>#${index+1}</b> in North America`;
+    div.appendChild(d1);
+
+    const d2 = document.createElement('ul');
+    let tags = ['Software Engineering', 'Hardware', 'Quantitative Finance', 'Data Science & Machine Learning'];
+    let vals = ['swe', 'hardware', 'quant', 'datascience_ml'];
+    for (let i = 0; i < 4; i++){
+        const li = document.createElement('li');
+        let jobCount = cityData.data[vals[i]];
+        li.innerHTML = `${jobCount} ${tags[i]} jobs`
+        d2.appendChild(li)
+    }
+    div.appendChild(d2);
+
+    // List all companies
+    // Company Header
+    const c1 = document.createElement('p');
+    c1.innerHTML = `<b>Companies</b>:`;
+    div.appendChild(c1);
+
+    // List of companies
+    const c2 = document.createElement('p');
+    for (let i = 0; i < companies.length; i++) {
+        c2.innerHTML += `${companies[i]}`;
+        if (i != companies.length - 1) c2.innerHTML += ', ';
+    }
+    div.appendChild(c2);
+    document.getElementById('map-container').appendChild(div);
+
+    // delete the div when exit button is clicked on 
+    exitBtn.addEventListener('click', () => {
+        div.remove();
+    })
+    console.log(cityData)
+}
 
 /**
  * zoom, zoomToFeature(), resetZoom() code generated with ChatGPT 5
