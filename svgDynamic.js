@@ -21,6 +21,7 @@ var stateStats = {}; // contains aggregated job stats
 var cities_in_state = {}; // contains list of all cities
 var companies_in_state = {}; // contains list of all companies in a state
 var city_indices = {}; // maps city name to index in dataset
+var state_features = {}; // maps state names to geoJSON feature objects
 
 var globalProjection = undefined;
 var showCities = true;
@@ -105,6 +106,12 @@ function createProjection(data_geoJSON) {
                 }
             }
         });
+    d3.select('#SVG_G').selectAll('path')
+        .each((d) => {
+            const stateName = d.properties.NAME;
+            state_features[stateName] = d;
+        })
+    console.log(state_features);
 
     // Draw and Parse the cities
     d3.json('internship_data.json').then(internship_data => {
@@ -251,8 +258,12 @@ function filterChart(trait, projection) {
         const fillColor = '#04ffd9ff';
         const g = d3.select('#SVG_G');
         g.append('circle')
+            // store projection coordinates
             .attr('cx', XYcoords[0])
             .attr('cy', XYcoords[1])
+            // store original latitutde and longitude
+            .attr('long', coords[0])
+            .attr('lat', coords[1])
             .attr('r', 0)
             .attr('rMAX', r)
             .attr('fill', fillColor)
@@ -386,11 +397,30 @@ document.getElementById('projection_btn').addEventListener('click', () => {
 })
 
 function cityStats(city) {
+    // get coordinates of city and create a geoJSON feature for zooming into
+    const long = +document.getElementById(city).getAttribute('long');
+    const lat = +document.getElementById(city).getAttribute('lat');
+    const cityFeature = {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [lat, long]
+        },
+        "properties": {
+            "name": city
+        }
+    }
+    zoomedInState = null;
+    zoomToFeature(cityFeature);
+
+    document.getElementById('title').innerHTML = ''; // hide chart title
+    // delete previous cityStats div elements
     if (document.getElementById('cityStats') != undefined)
         document.getElementById('cityStats').remove();
 
     const div = document.createElement('div');
     div.setAttribute('id', 'cityStats');
+    div.setAttribute('class', 'cityStatsDiv')
 
     const index = city_indices[city];
     const cityData = internshipData.cities[index];
@@ -406,13 +436,13 @@ function cityStats(city) {
     div.appendChild(exitBtn);
 
     const d1 = document.createElement('p');
-    d1.innerHTML = `<b>${cityData.data.jobs} roles</b>, Rank <b>#${index+1}</b> in North America`;
+    d1.innerHTML = `<b>${cityData.data.jobs} roles</b>, Rank <b>#${index + 1}</b> in North America`;
     div.appendChild(d1);
 
     const d2 = document.createElement('ul');
     let tags = ['Software Engineering', 'Hardware', 'Quantitative Finance', 'Data Science & Machine Learning'];
     let vals = ['swe', 'hardware', 'quant', 'datascience_ml'];
-    for (let i = 0; i < 4; i++){
+    for (let i = 0; i < 4; i++) {
         const li = document.createElement('li');
         let jobCount = cityData.data[vals[i]];
         li.innerHTML = `${jobCount} ${tags[i]} jobs`
@@ -420,11 +450,15 @@ function cityStats(city) {
     }
     div.appendChild(d2);
 
+    const lowerDiv = document.createElement('div');
+    lowerDiv.setAttribute('id', 'cityStatsLower');
+    lowerDiv.setAttribute('class', 'cityStatsDiv')
+
     // List all companies
     // Company Header
     const c1 = document.createElement('p');
-    c1.innerHTML = `<b>Companies</b>:`;
-    div.appendChild(c1);
+    c1.innerHTML = `<b>Companies hiring in ${city.split(',')[0]}</b>:`;
+    lowerDiv.appendChild(c1);
 
     // List of companies
     const c2 = document.createElement('p');
@@ -432,21 +466,24 @@ function cityStats(city) {
         c2.innerHTML += `${companies[i]}`;
         if (i != companies.length - 1) c2.innerHTML += ', ';
     }
-    div.appendChild(c2);
+    lowerDiv.appendChild(c2);
+
     document.getElementById('map-container').appendChild(div);
+    document.getElementById('map-container').appendChild(lowerDiv);
 
     // delete the div when exit button is clicked on 
     exitBtn.addEventListener('click', () => {
         div.remove();
+        lowerDiv.remove();
     })
-    console.log(cityData)
+    // console.log(cityData)
 }
 
 /**
  * zoom, zoomToFeature(), resetZoom() code generated with ChatGPT 5
  */
 const zoom = d3.zoom()
-    .scaleExtent([1, 8])
+    .scaleExtent([1, 20])
     .on("zoom", (event) => {
         d3.select('#SVG_G').attr("transform", event.transform);
     })
@@ -458,25 +495,40 @@ const zoom = d3.zoom()
 svg.call(zoom);
 
 function zoomToFeature(feature) {
+    // Click exitBtn to remove cityStats if applicable
+    if (document.getElementById('exitBtn') != undefined)
+        document.getElementById('exitBtn').click();
+
+    console.log('feature', feature);
     document.getElementById('quickStats').classList.add('hidden');
     changeCityRadii();
 
     updateTitle(lastTrait);
-    const [[x0, y0], [x1, y1]] = pathGenerator.bounds(feature);
-    const dx = x1 - x0;
-    const dy = y1 - y0;
-    const x = (x0 + x1) / 2;
-    const y = (y0 + y1) / 2;
+    let x, y, scale;
 
-    const scale = Math.min(8, 0.85 / Math.max(dx / svgWidth, dy / svgHeight));
-
+    if (feature.geometry.type === "Point") {
+        console.log('Point')
+        console.log(feature.geometry.coordinates);
+        const project = globalProjection(feature.geometry.coordinates);
+        console.log(project);
+        [x, y] = globalProjection(feature.geometry.coordinates);
+        scale = 10; // fixed zoom level
+    } else {
+        const [[x0, y0], [x1, y1]] = pathGenerator.bounds(feature);
+        const dx = x1 - x0;
+        const dy = y1 - y0;
+        x = (x0 + x1) / 2;
+        y = (y0 + y1) / 2;
+        scale = Math.min(8, 0.85 / Math.max(dx / svgWidth, dy / svgHeight));
+    }
     const transform = d3.zoomIdentity
         .translate(svgWidth / 2, svgHeight / 2)
         .scale(scale)
         .translate(-x, -y);
 
     stateOpacities(0.5);
-    document.getElementById(zoomedInState).setAttribute('opacity', 1);
+    if (zoomedInState != null)
+        document.getElementById(zoomedInState).setAttribute('opacity', 1);
 
     svg.transition()
         .duration(1000)
