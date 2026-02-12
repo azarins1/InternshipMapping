@@ -3,8 +3,6 @@ const svgHeight = container.clientHeight - document.getElementById('top-bar').cl
 const svgWidth = container.clientWidth;
 
 import { states, fullStateNames } from './state_names.js';
-console.log(states, fullStateNames)
-console.log(Object.values(states));
 
 const svg = d3.select("#map-container")
     .append("svg")
@@ -23,35 +21,39 @@ var stateStats = {};
 var globalProjection = undefined;
 var showCities = true;
 var lastTrait = 'jobs';
-var zoomInUSA = false;
+var showOnlyUSA = false;
 var globalProjection = null;
 var geoJSON_data = null;
-var fileName = '2010_us_census.json';
+var pathGenerator = null;
+var zoomedInState = null;
+
 d3.json('canada_and_usa.json').then(unitedStates => {
     geoJSON_data = unitedStates;
     createProjection(geoJSON_data);
 });
 function createProjection(data_geoJSON) {
     // Map projection, pathGenerator, and svg append (except mouse events) generated with OpenAI ChatGPT 5
-    let projection;
-    if (zoomInUSA) {
-        projection = d3.geoAlbersUsa()
+    if (showOnlyUSA) {
+        globalProjection = d3.geoAlbersUsa()
             .fitSize([svgWidth, svgHeight], data_geoJSON)
     } else {
-        projection = d3.geoAlbers()
-            .parallels([29.5, 45.5])       
+        globalProjection = d3.geoAlbers()
+            .parallels([29.5, 45.5])
             .rotate([96, 0])
             .center([0, 50])
             .scale(Math.min(1200, svgWidth))
             .translate([svgWidth / 2, svgHeight / 2]);
     }
-    globalProjection = projection;
 
-    const pathGenerator = d3.geoPath()
-        .projection(projection);
+    pathGenerator = d3.geoPath()
+        .projection(globalProjection);
 
     removeAllStates(); // delete any previous polygon paths
+    if (document.getElementById('SVG_G') != undefined)
+        document.getElementById('SVG_G').remove();
+
     svg.append("g")
+        .attr('id', 'SVG_G')
         .selectAll("path")
         .data(data_geoJSON.features)
         .enter()
@@ -79,25 +81,39 @@ function createProjection(data_geoJSON) {
         .on("mousemove", (evt) => {
             tooltip.style("top", (event.offsetY) + "px").style("left", (event.offsetX + 10) + "px");
         })
+        .on('click', (evt) => {
+        })
         .on('mouseleave', (event) => {
             tooltip.style("visibility", "hidden");
             document.getElementById(event.currentTarget.id).style.strokeWidth = '0.5';
         })
 
+    // Zoom setup - generated with ChatGPT 5
+    d3.select('#SVG_G').selectAll("path")
+        .on("click", (event, d) => {
+            let selectedState = d.properties.NAME;
+            if (zoomedInState == selectedState) {
+                resetZoom(); // we are already zoomed in - zoom out
+            } else {
+                zoomedInState = d.properties.NAME;
+                zoomToFeature(d);
+            }
+        });
+
     // Draw and Parse the cities
     d3.json('internship_data.json').then(internship_data => {
         internshipData = internship_data;
-        filterChart(lastTrait, projection) // filter cities by role
+        filterChart(lastTrait, globalProjection) // filter cities by role
     });
 
-    if (zoomInUSA){
+    if (showOnlyUSA) {
         // hide Canadian provinces and Mexico
         const to_hide = ['Mexico',
             'Yukon', 'Northwest Territories', 'Nunavut', 'British Columbia',
             'Alberta', 'Ontario', 'Quebec', 'New Brunswick', 'Manitoba',
             'Saskatchewan', 'Prince Edward Island', 'Nova Scotia'
         ]
-        for (let i = 0; i < to_hide.length; i++){
+        for (let i = 0; i < to_hide.length; i++) {
             document.getElementById(to_hide[i]).style.display = 'none';
         }
     }
@@ -122,20 +138,17 @@ function toggleCities() {
 // Delete all circles in the SVG
 function removeAllCities() {
     let circles = document.getElementsByTagName('circle');
-    console.log(`Removing ${circles.length} circles`);
     for (let i = circles.length - 1; i >= 0; i--) {
         circles[i].remove();
     }
-    console.log('done');
+    console.log('citiesRemoved')
 }
 
 function removeAllStates() {
     let states = document.getElementsByClassName('state');
-    console.log(`Removing ${states.length} state`);
     for (let i = states.length - 1; i >= 0; i--) {
         states[i].remove();
     }
-    console.log('done');
 }
 
 function capitalizeWord(word) {
@@ -159,7 +172,7 @@ function filterChart(trait, projection) {
 
     // Update the chart's title
     let region = 'North America'
-    if (zoomInUSA) region = 'United States'
+    if (showOnlyUSA) region = 'United States'
     let titleText = `Tech Internships in ${region}`;
     if (trait != 'jobs')
         titleText = `${capitalizeWord(trait)} Internships in ${region}`;
@@ -169,12 +182,11 @@ function filterChart(trait, projection) {
 
     stateStats = {}; // reset state stats
     const data = internshipData.cities;
-    console.log(data[0].location, data[0].data.jobs, data[0].data[trait]);
     for (let i = 0; i < data.length; i++) {
         // draw city
         const coords = data[i].data.coords;
 
-        if (data[i].location.indexOf('Canada') != -1 && zoomInUSA){
+        if (data[i].location.indexOf('Canada') != -1 && showOnlyUSA) {
             continue; // ignore Canadian cities when zoomed into USA
         }
         if (coords == undefined) {
@@ -193,7 +205,8 @@ function filterChart(trait, projection) {
 
         let r = Math.sqrt(data[i].data[trait]) * (svgWidth / 750);
         const fillColor = '#04ffd9ff';
-        svg.append('circle')
+        const g = d3.select('#SVG_G');
+        g.append('circle')
             .attr('cx', XYcoords[0])
             .attr('cy', XYcoords[1])
             .attr('r', 0)
@@ -259,7 +272,7 @@ function filterChart(trait, projection) {
     quickStats.innerHTML =
         `<p><b><u>${total_jobs} total roles</u></b></p>`;
     let quantity = 5;
-    if (!zoomInUSA && svgWidth > 1000) quantity = 10;
+    if (!showOnlyUSA && svgWidth > 1000) quantity = 10;
     for (let i = 0; i < quantity; i++) {
         let entry = document.createElement('p');
         entry.innerHTML = `${i + 1}. ${region_array[i].state}, ${region_array[i].jobs} (${Math.floor(region_array[i].jobs * 100 / total_jobs)}%)<br>`
@@ -268,21 +281,22 @@ function filterChart(trait, projection) {
     }
 
     // Color in the states
+    const baseNum = 80;
     let state_names = Object.values(states);
     for (let i = 0; i < state_names.length; i++) {
         // console.log(state_names[i]);
-        document.getElementById(state_names[i]).style.fill = 'rgb(0,80,80)';
+        document.getElementById(state_names[i]).style.fill = `rgb(0,${baseNum},${baseNum})`;
     }
-    console.log(region_array)
     for (let i = 0; i < region_array.length; i++) {
         const stateName = region_array[i].state;
         const jobs = region_array[i].jobs;
         const factor = 1 / 4;
         let scale = Math.pow(jobs, factor) * 255 / Math.pow(maxJobs, factor);
+        let scale2 = baseNum;//scale * 0.2 + baseNum;
         if (document.getElementById(stateName) == undefined)
             continue;
         document.getElementById(stateName).style.fill =
-            `rgb(${scale}, 80, 80)`;
+            `rgb(${scale}, ${scale2}, ${scale2})`;
     }
 
     if (showCities == false)
@@ -309,11 +323,47 @@ createLegend();
 
 document.getElementById('projection_btn').addEventListener('click', () => {
     const projectionBtn = document.getElementById('projection_btn');
-    zoomInUSA = !zoomInUSA;
+    showOnlyUSA = !showOnlyUSA;
     createProjection(geoJSON_data);
-    if (zoomInUSA) {
+    if (showOnlyUSA) {
         projectionBtn.innerHTML = 'View North America';
     } else {
         projectionBtn.innerHTML = 'View United States'
     }
 })
+
+/**
+ * zoom, zoomToFeature(), resetZoom() code generated with ChatGPT 5
+ */
+const zoom = d3.zoom()
+    .scaleExtent([1, 8])
+    .on("zoom", (event) => {
+        d3.select('#SVG_G').attr("transform", event.transform);
+    });
+
+svg.call(zoom);
+
+function zoomToFeature(feature) {
+    const [[x0, y0], [x1, y1]] = pathGenerator.bounds(feature);
+    const dx = x1 - x0;
+    const dy = y1 - y0;
+    const x = (x0 + x1) / 2;
+    const y = (y0 + y1) / 2;
+
+    const scale = Math.min(8, 0.9 / Math.max(dx / svgWidth, dy / svgHeight));
+
+    const transform = d3.zoomIdentity
+        .translate(svgWidth / 2, svgHeight / 2)
+        .scale(scale)
+        .translate(-x, -y);
+
+    svg.transition()
+        .duration(750)
+        .call(zoom.transform, transform);
+}
+function resetZoom() {
+    zoomedInState = null;
+    svg.transition()
+        .duration(750)
+        .call(zoom.transform, d3.zoomIdentity);
+}
