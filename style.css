@@ -24,7 +24,7 @@ body {
 .cityStatsDiv {
     /* margin: calc(10px + 2vw);    */
     position: absolute;
-    padding: calc(10px + 2vw);
+    padding: 0 calc(10px + 2vw);
     border-radius: calc(20px + 2vw);
     max-height: 30%;
     max-width: 80%;
@@ -136,6 +136,7 @@ svg {
     bottom: calc(5vw);
     left: 20px;
     color: white;
+    transition-duration: 1s;
 }
 #legend div{
     display: inline-block;

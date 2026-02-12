@@ -31,6 +31,7 @@ var globalProjection = null;
 var geoJSON_data = null;
 var pathGenerator = null;
 var zoomedInState = null;
+var zoomedIntoCity = false;
 
 d3.json('canada_and_usa.json').then(unitedStates => {
     geoJSON_data = unitedStates;
@@ -96,7 +97,7 @@ function createProjection(data_geoJSON) {
     d3.select('#SVG_G').selectAll("path")
         .on("click", (event, d) => {
             let selectedState = d.properties.NAME;
-            if (zoomedInState == selectedState) {
+            if (zoomedInState == selectedState && zoomedIntoCity == false) {
                 resetZoom(); // we are already zoomed in - zoom out
             } else {
                 if (d.properties.NAME != 'Mexico') {
@@ -161,14 +162,17 @@ function removeAllCities() {
 function changeCityRadii() {
     let opacity = 0.5
     let factor = 1;
-    if (zoomedInState != null) {
+    if (zoomedIntoCity != false){
+        factor = 0.1;
+        opacity = 1;
+    } else if (zoomedInState != null) {
         factor = 0.3;
         opacity = 1;
     }
     let circles = document.getElementsByTagName('circle');
     for (let i = 0; i < circles.length; i++) {
         const jobs = circles[i].getAttribute('TOTAL_JOBS');
-        let r = 0.5 + Math.sqrt(jobs) * (svgWidth / 750) * factor;
+        let r = 0.25 + Math.sqrt(jobs) * (svgWidth / 750) * factor;
         if (jobs == 0) r = 0;
         d3.select(circles[i])
             .transition()
@@ -186,7 +190,6 @@ function removeAllStates() {
 }
 
 function stateOpacities(opacityLevel) {
-    // return;
     let states = document.getElementsByClassName('state');
     for (let i = states.length - 1; i >= 0; i--) {
         states[i].setAttribute('transitionDuration', 0);
@@ -410,7 +413,10 @@ function cityStats(city) {
             "name": city
         }
     }
-    zoomedInState = null;
+
+    if (city.split(',').length > 1){
+        zoomedInState = states[city.split(',')[1].trim()]
+    }
     zoomToFeature(cityFeature);
 
     document.getElementById('title').innerHTML = ''; // hide chart title
@@ -501,19 +507,20 @@ function zoomToFeature(feature) {
 
     console.log('feature', feature);
     document.getElementById('quickStats').classList.add('hidden');
-    changeCityRadii();
+    document.getElementById('legend').classList.add('hidden');
 
     updateTitle(lastTrait);
     let x, y, scale;
 
     if (feature.geometry.type === "Point") {
-        console.log('Point')
+        zoomedIntoCity = true;
         console.log(feature.geometry.coordinates);
         const project = globalProjection(feature.geometry.coordinates);
         console.log(project);
         [x, y] = globalProjection(feature.geometry.coordinates);
-        scale = 10; // fixed zoom level
+        scale = 15; // fixed zoom level
     } else {
+        zoomedIntoCity = false;
         const [[x0, y0], [x1, y1]] = pathGenerator.bounds(feature);
         const dx = x1 - x0;
         const dy = y1 - y0;
@@ -521,12 +528,14 @@ function zoomToFeature(feature) {
         y = (y0 + y1) / 2;
         scale = Math.min(8, 0.85 / Math.max(dx / svgWidth, dy / svgHeight));
     }
+    stateOpacities(0.5); // create state opacities
+    changeCityRadii();
+
     const transform = d3.zoomIdentity
         .translate(svgWidth / 2, svgHeight / 2)
         .scale(scale)
         .translate(-x, -y);
 
-    stateOpacities(0.5);
     if (zoomedInState != null)
         document.getElementById(zoomedInState).setAttribute('opacity', 1);
 
@@ -539,6 +548,7 @@ function zoomToFeature(feature) {
 function resetZoom() {
     tooltip.style("visibility", "hidden");
     document.getElementById('quickStats').classList.remove('hidden');
+    document.getElementById('legend').classList.remove('hidden');
     zoomedInState = null;
     changeCityRadii();
     updateTitle(lastTrait);
